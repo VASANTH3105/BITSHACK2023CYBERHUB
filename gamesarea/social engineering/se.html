@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Threats List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+            background:linear-gradient(180deg, #a7a7ff, #c4fcff);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+    header {
+      
+      color: rgb(120, 229, 163);
+      padding: 10px 0;
+      text-align: center;
+    }
+      .password-input {
+            padding: 10px;
+            width: 220px;
+            border: 1px solid #ccc;
+            border-radius: 4px;}
+     .wifi-icon {
+            font-size: 60px;
+            margin-bottom: 20px;}
+            .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .response {
+            font-size: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+        .response.success {
+            color: green;
+            animation: fadeIn 2s forwards;
+        }
+        .response.failure {
+            color: red;
+            animation: fadeIn 2s forwards;
+        }
+        .card{
+            background: #ffffff;
+
+        }
+        .description{
+            background:#ffffff ;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  </style>
+</head>
+<body>
+
+    <header class="text-white text-center py-3" >
+        <h1>Social Engineering</h1>
+    </header>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="list-group" id="threat-list">
+        <li class="list-group-item" data-description="Phishing is a type of cyber attack where attackers disguise themselves as trustworthy entities to steal sensitive information.">Phishing</li>
+        <li class="list-group-item" data-description="A type of social engineering attack where a scammer uses a false promise to lure a victim into a trap which may steal personal and financial information or inflict the system with malware. The trap could be in the form of a malicious attachment with an enticing name.">Baiting</li>
+        <li class="list-group-item" data-description="Piggybacking is a social engineering attack in which an attacker uses another person's legitimate access to a physical or electronic location to gain unauthorized access themselves. This type of attack is often seen in office buildings, where an attacker will follow someone with an access badge into a secured area.">Piggybacking/Tailgating</li>
+        <li class="list-group-item" data-description="Honeytraps are a type of romance scam in which scammers create fake online dating and social media profiles using attractive stolen photos. For example, in a military romance scam, the fraudster will pose as an active service member stationed far away and unable to meet in person.
+          Once they identify a target, they’ll start sending flirty and provocative messages, and quickly tell their victims they’re in love with them. But, they need the victims to prove they feel the same way by sending gifts, cash, or cryptocurrency. 
+         Honeytraps are especially rampant on social media sites like //'Snapchat'\\. Make sure you're always staying safe and are aware of the dangers of online dating.">Honey traps</li>
+         <li class="list-group-item" data-description="A watering hole attack occurs when hackers infect a site that they know you regularly visit. 
+         When you visit the site, you automatically download malware (known as a drive-by-download). Or, you'll be taken to a fake version of the site that is designed to steal your credentials. 
+         For example, scammers could divert you away from a normal login page to one designed to steal your account name and password. It will look exactly the same. But anything you enter will go straight to the scammer. 
+         This is where having a password manager becomes so important. Even if a phishing site looks exactly like the real one, a password manager won’t automatically enter your credentials.">Watering Hole Attack</li>
+         <li class="list-group-item "data-description="Smishing is a form of phishing that uses mobile phones as the attack platform. The criminal executes the attack with an intent to gather personal information, including social insurance and/or credit card numbers. Smishing is implemented through text messages or SMS, giving the attack the name “SMiShing.”">Smishing</li>
+         <li class="list-group-item" data-description="Pretexting is use of a fabricated story, or pretext, to gain a victim's trust and trick or manipulate them into sharing sensitive information, downloading malware, sending money to criminals, or otherwise harming themselves or the organization they work for.">Pretexting</li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <div class="description" id="description-card">
+        <div class="card-body">
+          <h5 class="card-title">Description</h5>
+          <p class="card-text" id="threat-description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+ <div id="contain" class="container container-fluid col-10">
+ <!-- Phishing Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Phishing Game
+    </div>
+    <div class="card-body">
+        
+        <p>
+            You receive an email that appears to be from your bank, and it says that your account has been compromised. It asks you to click on a link to reset your password immediately. What will you do?
+        </p>
+        <div class="button-container">
+            <button class="button" id="phishingLink">Click the Link</button>
+            <button class="button" id="ignoreEmail">Ignore the Email</button>
+        </div>
+        <p class="response" id="phishingResponse" style="display: none;"></p>
+    </div>
+</div>
+
+
+<!-- Baiting Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Baiting Game
+    </div>
+    <div class="card-body">
+
+        <!-- Baiting Game Scenario -->
+        <div class="file-icon">📁</div>
+        <p>
+            Unlock a surge in your Instagram presence! Experience an immediate boost of 5K followers by simply downloading the provided file. Elevate your social media game and watch your profile shine. Embrace the power of rapid growth and become an influencer today!
+        </p>
+        <div class="button-container">
+            <button class="button" id="download">Download</button>
+            <button class="button" id="dontDownload">Don't Download</button>
+        </div>
+        <p id="result" style="display: none;"></p>
+    </div>
+
+</div>
+
+<!-- Piggybacking/Tailgating Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Piggybacking/Tailgating Game
+    </div>
+    <div class="card-body">
+        <div class="wifi-icon">📶</div>
+        <p>
+            An attacker identifies a coffee shop with an open Wi-Fi network.
+            Customers at the coffee shop are required to enter a password to connect to the network.
+            The attacker waits nearby and watches as a customer enters the password to access the Wi-Fi.
+            Once the customer is connected, the attacker immediately connects to the same network using the stolen password, effectively piggybacking on the legitimate user's access.
+            The attacker can then attempt to launch cyber attacks or intercept sensitive data on the network.
+        </p>
+        <label for="password">Enter Wi-Fi Password:</label>
+        <input type="password" id="password" class="password-input">
+        <button class="button" id="connect">Connect</button>
+        <button class="button" id="deny">Deny</button>
+        <p class="response success" id="successResponse">Excellent work! You prevented unauthorized access.</p>
+        <p class="response failure" id="failureResponse">Oops! The attacker gained unauthorized access.</p>
+    </div>
+</div>
+
+
+<!-- Honey Trap Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Honey Trap Game
+    </div>
+    <div class="card-body">
+        <p>
+            You meet someone online who claims to be a U.S. military service member stationed overseas. They send you attractive photos and express their love for you. They ask for your help and request that you send them a gift, cash, or even cryptocurrency to show your love. What will you do?
+        </p>
+        <div class="button-container">
+            <button class="button" id="sendGift">Send a Gift</button>
+            <button class="button" id="ignoreRequest">Ignore the Request</button>
+        </div>
+        <p class="response" id="honeyTrapResponse" style="display: none;"></p>
+    </div>
+</div>
+
+<!-- Watering Hole Attack Game -->
+<!-- Innovative Watering Hole Attack Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Innovative Watering Hole Attack Game
+    </div>
+    <div class="card-body">
+        <p>
+            Imagine you are an adventurer in the mythical land of Cyberia, and you regularly visit the "Kingdom of Knowledge" - a trusted library for all your quest-related research. Today, when you enter the kingdom, you notice something peculiar. It's still the same grand library, but the scrolls you need are locked behind a mysterious gate, and it asks you to enter your "Cyberia Passport" to access them. What will you do?
+        </p>
+        <div class="button-container">
+            <button class="button" id="enterPassport">Enter Passport</button>
+            <button class="button" id="seekWisdom">Seek Wisdom</button>
+        </div>
+        <p class="response" id="innovativeWateringHoleResponse" style="display: none;"></p>
+    </div>
+</div>
+
+
+
+<!-- Smishing -->
+<div class="card mb-4">
+    <div class="card-header">
+        Updated Smishing Game
+    </div>
+    <div class="card-body">
+
+        <p>
+            You're enjoying a quiet evening at home when you receive an urgent SMS message from a number you don't recognize. The message says:
+        </p>
+        <blockquote>
+            "Your bank account has been compromised! Please click the link to secure your funds immediately: [Suspicious Link]"
+        </blockquote>
+        <p>What will you do?</p>
+        <div class="button-container">
+            <button class="button" id="clickLink">Click the Link</button>
+            <button class="button" id="ignoreMessage">Ignore the Message</button>
+        </div>
+        <p class="response" id="smishingResponse" style="display: none;"></p>
+    </div>
+</div>
+
+
+<!-- Pretexting Game -->
+<div class="card mb-4">
+    <div class="card-header">
+        Pretexting Game
+    </div>
+    <div class="card-body">
+        
+        <p>
+            You receive a phone call at work from someone who claims to be an IT technician from your organization's support team. They say:
+        </p>
+        <blockquote>
+            "Hello, this is John from IT Support. We are currently performing a security audit and need to verify your account credentials to ensure your account's safety. Can you please provide your username and password?"
+        </blockquote>
+        <p>What will you do?</p>
+        <div class="button-container">
+            <button class="button" id="provideCredentials">Provide Credentials</button>
+            <button class="button" id="verifyIdentity">Verify Identity</button>
+        </div>
+        <p class="response" id="pretextingResponse" style="display: none;"></p>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="se.js"></script>
+</body>
+</html>

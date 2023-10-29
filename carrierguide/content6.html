@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content 1</title>
+  <link rel="stylesheet" href="./carrierguide/carrier.css">
+
+   
+</head>
+<body>
+    <div class="content1-container">
+
+        <h1>Advance level timeline cards</h1>
+        <ul>
+            <li style="--accent-color:#41516C">
+                <div class="date">Stage: 11</div>
+                <div class="title">Networking and Protocols</div>
+                <div class="descr">Dive deeper into networking basics, understand protocols, and explore how data is transmitted securely. Learn about firewalls and intrusion detection systems.</div>
+            </li>
+            <li style="--accent-color:#FBCA3E">
+                <div class="date">Stage: 12</div>
+                <div class="title">Operating Systems and Security</div>
+                <div class="descr">Explore operating system security, focusing on Windows and Linux. Learn about user authentication, access controls, and securing system configurations.</div>
+            </li>
+            <li style="--accent-color:#E24A68">
+                <div class="date">Stage: 13</div>
+                <div class="title">Cybersecurity Policies and Compliance</div>
+                <div class="descr">Understand cybersecurity policies, regulations, and compliance standards. Explore risk management and incident response planning.</div>
+            </li>
+            <li style="--accent-color:#1B5F8C">
+                <div class="date">Stage: 14</div>
+                <div class="title">Threats and Defense Strategies</div>
+                <div class="descr">Delve into advanced threats such as malware, phishing, and ransomware. Learn about cybersecurity best practices, defense strategies, and tools.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+                <div class="date">Stage: 15</div>
+                <div class="title">Advanced Threat Analysis and Incident Response</div>
+                <div class="descr">Focus on analyzing advanced threats, developing incident response plans, and conducting forensic investigations. Explore threat intelligence and security operations center (SOC) practices.</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const targetEl = document.querySelector('.target');
+
+        const loadSnippet = number => {
+            console.log('Fetching content for timeline' + number);
+            fetch(`http://127.0.0.1:5500/timeline/timelinepages/timeline${number}.html`)
+                .then(res => {
+                    if (res.ok) {
+                        return res.text();
+                    } else {
+                        console.log('Fetch failed:', res.status, res.statusText);
+                    }
+                })
+                .then(htmlSnippet => {
+                    console.log('Fetched HTML snippet:', htmlSnippet);
+                    targetEl.innerHTML = htmlSnippet;
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
+                });
+        };
+
+    </script>
+</body>
+</html>

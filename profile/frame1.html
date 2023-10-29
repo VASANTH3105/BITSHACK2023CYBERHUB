@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid col-11">
+    <h2 class="text-center m-3">My profile</h2>
+    <div class="profile-tab-nav border-right">
+      <div class="p-4">
+        <div class="img-circle text-center mb-3">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAZlBMVEX///8rLzIiJypkZmcAAAAlKSwWHCD6+voTGR0oLC8aHyPx8fGjo6QbISSnqKh/gIJUVljU1NUAAAdAQ0UABw/f39+MjY4MFBnl5ebKy8tsbnBeYGI2Ojx2eHlHSkyFh4iXmJm4uLnxVhhVAAADCElEQVRoge2ZXZuqIBRGBUtFwvxGsiz//58czTrTzGSxcZMXh3XTRRfrAfZGePE8h8PhcDgcNgkblewPvn/YJ6oJPyiu6pTJSNABEUmW1tWHxKotgy15YBuUrfqAOEvzH96bPU8zy+Jw/0w8yfdW17w6xs/FI/HR4pJn0cyQbwOPrE26CtgrMyEssFRtGX1jHtzUyrj58eVs3+b8yC2oW/HeTIho8c2J1DETIhNsM2dvF3qCMewpP2tN93XKz7hmHumahynHHfYu0FcHO1R1obnSI6zANFcbfTMhG8y9HDLfyDN+ohA1PeGZww6w1MNid3hfbq65k91BbC8OqrKhzvDUsAJHLfH/U73iWkM+HiMRnnrFvl5xN/MS0IxHmGekBvblahDVK36v1zylQNoLsbWurHci9fj7C9cEo+hXn/VuH553eHGr/yY+4Ju9ptDY0miB2tN31rtfe57K36UKubUMK9u8zlI2FgMsXrzYWqLCRqLwj7CWM8VGZW07K83aZ3IqW9tp4Yhq6e+MlH4kIx2pLh2Ng3hMhsef7vKpZPhKo5J6zMPrRFnZRBxXQnU4zVRydjooe90V9mkgRNwmv187wiZpYyGitLckV2l57amtjNtzX3EeDnBe9ec2ltM/ZWejyRr/If/fCpnnrOi6guW5FA9/5D56wSflnz2MXfmzr5W4x5TQB0Qa0kdc8arQPo+OiAJtd1MMdNsbJp0gVZuiGvH/T7YUxa0E6HI9wQSCu5IG5sEdLW4ybmYe3OXSOk+BFfYNTZeZL8CI8hF5WWLOgNHRT5a8M4bm0z1CU/PlTsolZkLMt3NODKv7DiOml4Ia9OzwjKA2HLTugx7+sHdad/nXxGZp0nHxoMdHZRNztrC8J0qT3q5Bx4M5hEmhLe2sCUbgZuijwxwGWS0sh57HIKGGpe/zwHP5MAUfyJ6zBX9DoC8t88TQDa3JsdQ5tM4UyoYyUkLPpj2eugeqdTPo94BTaqy2NmjsHZ4a+t106k+rS4pECVX3rY9EC+1rh8PhcDgcv/gCSXwvmKpnryMAAAAASUVORK5CYII="
+            alt="Image" class="shadow">
+        </div>
+        <h4 class="text-center">
+          <?php echo $row["name"]; ?>
+        </h4>
+      </div>
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <!--<a class="nav-link active" id="account-tab" data-toggle="pill" href="#Profile" role="tab" aria-controls="account" aria-selected="true">
+							<i class="fa fa-home text-center mr-1"></i> 
+							Profile
+						</a>
+						-->
+        <div class="alert alert-light" role="alert">
+          <h6 style="color:#000;">Welcome,</h6>
+          <h3 class="form-control">noname00
+            <?php echo $row["name"]; ?>
+          </h3>
+          <h6 style="color:#000;">Welcome,</h6>
+          <h3 class="form-control">noname00
+            <?php echo $row["name"]; ?>
+          </h3>
+          <h6 style="color:#000;">Welcome,</h6>
+          <h3 class="form-control">noname00
+            <?php echo $row["name"]; ?>
+          </h3>
+        </div>
+
+        <!-- <div class="alert alert-light" role="alert">
+          Achivements
+        </div> -->
+
+        <div class="alert alert-light" role="alert">
+          Terms & Conditions
+        </div>
+
+        <div class="alert alert-light" role="alert">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 ">
+              <a class="nav-link" href="index.php">Home</a>
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+              <a class="nav-link" href="logout.php">Logout</a>
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class="alert alert-light" role="alert">
+          
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

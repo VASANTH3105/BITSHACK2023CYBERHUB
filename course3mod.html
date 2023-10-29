@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    #logo {
+        height: 20px;
+        width: 30px;
+    }
+    
+    h3 {
+        margin-top: 15px;
+    }
+    
+    p {
+        background-color: aliceblue;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    .img-cen {
+        text-align: center;
+    }
+</style>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <img id="logo" class="img-fluid md-mx-3 mx-5" src="imgs\SHlogo.png" alt="">
+        <b class="bold">CyberHub<small></small> </b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="category.html">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carreirguide.html">Career Guidance</a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#paidcourses">Paid courses</a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid col-12 mt-lg-4 p-4">
+        <div class="row">
+            <div class="col-lg-3 clo-md-4 order-1 col-12">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link bg-black text-light" href="">Network Security Concepts</a><br><br>
+                        <a class="nav-link bg-black text-light" href="#item-1">Introduction</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">Why should I take this module?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">What will I learn in this module?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Ethical Hacking Statement</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-2">Current State of Cybersecurity</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-2-1">Current State of Affairs</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-2">Vectors of Network Attacks</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-3">Data Loss</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-3">Threat Actors</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">The Hacker</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Evolution of Hackers</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-3">Cyber Criminals</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-4">Hacktivists</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-5">State-Sponsored Hackers</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-4">Malware</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-4-1">Overview of Malware</a>
+                            <a class="nav-link ms-3 my-1" href="#item-4-2">Viruses and Trojan Horses</a>
+                            <a class="nav-link ms-3 my-1" href="#item-4-3">Other Types of Malware</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-5">Amplification and Reflection Attacks</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-5-1">IPv4 and IPv6</a>
+                            <a class="nav-link ms-3 my-1" href="#item-5-2">ICMP Attacks</a>
+                            <a class="nav-link ms-3 my-1" href="#item-5-3">Amplification and Reflection Attacks</a>
+                            <a class="nav-link ms-3 my-1" href="#item-5-4">Address Spoofing Attacks</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-6">TCP and UDP Vulnerabilities</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-6-1">TCP Segment Header</a>
+                            <a class="nav-link ms-3 my-1" href="#item-6-2">TCP Services</a>
+                            <a class="nav-link ms-3 my-1" href="#item-6-3">TCP Attacks</a>
+                            <a class="nav-link ms-3 my-1" href="#item-6-4">UDP Segment Header and Operation</a>
+                            <a class="nav-link ms-3 my-1" href="#item-6-5">UDP Attacks</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-7">IP Services</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-7-1">ARP Vulnerabilities</a>
+                            <a class="nav-link ms-3 my-1" href="#item-7-2">DNS Attacks</a>
+                            <a class="nav-link ms-3 my-1" href="#item-7-3">DNS Tunneling</a>
+                            <a class="nav-link ms-3 my-1" href="#item-7-4">DHCP Attacks</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-8">Cryptography</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-8-1">Securing Communications</a>
+                            <a class="nav-link ms-3 my-1" href="#item-8-2">Data Integrity</a>
+                            <a class="nav-link ms-3 my-1" href="#item-8-3">Hash Functions</a>
+                            <a class="nav-link ms-3 my-1" href="#item-8-4">Data Confidentiality</a>
+                            <a class="nav-link ms-3 my-1" href="#item-8-5">Diffie-Hellman</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+
+            <div class="col-lg-9 c-md-8 order-2 col-12">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+                    <div id="item-1">
+                        <h2>Introduction</h2>
+                    </div>
+                    <div id="item-1-1">
+                        <h3>1.1 Why should I take this module?</h3>
+                        <p>Welcome to Network Security Concepts!
+                            <br><br> Perhaps you’ve heard one of the hundreds of news stories about a data security breach within a large corporation or even a government. Was your credit card number exposed by a breach? Your private health information?
+                            Would you like to know how to prevent these data breaches? The field of network security is growing every day. This module provides a detailed landscape of the types of cybercrime and the many ways we have to fight back against
+                            cybercriminals. Let’s get started!<br><br></p>
+                    </div>
+
+                    <div id="item-1-2">
+                        <h3>1.2 What will I learn in this module?</h3>
+                        <p><strong>Module Title:</strong> Network Security Concepts
+                            <br><br>
+                            <strong>Module Objective:</strong> Explain how vulnerabilities, threats, and exploits can be mitigated to enhance network security.<br><br></strong>
+                        </p>
+                        <table class="table table-success table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><br>Topic Title<br></th>
+                                    <th scope="col"><br>Topic Objective<br></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><br>Current State of Cybersecurity<br></th>
+                                    <td><br>Describe the current state of cybersecurity and vectors of data loss.<br></td>
+                                </tr>
+                                <tr>
+                                    <th><br>Threat Actors<br></th>
+                                    <td><br> Describe tools used by threat actors to exploit networks.<br></td>
+                                </tr>
+                                <tr>
+                                    <th><br>Malware<br></th>
+                                    <td><br>Describe malware types.<br></td>
+                                </tr>
+                                <tr>
+                                    <th><br>Common Network Attacks<br></th>
+                                    <td><br>Describe common network attacks.<br></td>
+                                </tr>
+                                <tr>
+                                    <th><br>IP Vulnerabilities and Threats<br></th>
+                                    <td><br>Explain how IP vulnerabilities are exploited by threat actors.<br></td>
+                                </tr>
+                                <tr>
+                                    <tr>
+                                        <th><br>TCP and UDP Vulnerabilities<br></th>
+                                        <td><br> Explain how TCP and UDP vulnerabilities are exploited by threat actors.<br></td>
+                                    </tr>
+                                    <tr>
+                                        <th><br>IP Services<br></th>
+                                        <td><br> Explain how IP services are exploited by threat actors.<br></td>
+                                    </tr>
+                                    <tr>
+                                        <th><br>Network Security Best Practices<br></th>
+                                        <td><br> Describe best practices for protecting a network.<br></td>
+                                    </tr>
+                                    <tr>
+                                        <th><br>Cryptography<br></th>
+                                        <td><br>Describe common cryptographic processes used to protect data in transit.<br></td>
+                                    </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="item-1-3">
+                        <h3>1.3 Why should I take this module?</h3>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <p>In this module, learners may be exposed to tools and techniques used by cybercriminals to demonstrate various types of attacks.<br><br> Unauthorized access to data, computer, and network systems is a crime in many jurisdictions
+                                    and often is accompanied by severe consequences, regardless of the perpetrator’s motivations. It is the learner’s responsibility, as the user of this material, to be cognizant of and compliant with computer use laws.<br><br></p>
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-12">
+                                <img class="img-thumbnail" src="https://contenthub.netacad.com/courses/ensa-dl/ae8e8c80-34fd-11eb-ba19-f1886492e0e4/aeb3c7c2-34fd-11eb-ba19-f1886492e0e4/assets/c5c8efb0-1c46-11ea-af56-e368b99e9723.png" alt="img not found">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="item-2-1">
+                        <h3>2.1 Current State of Affairs</h3>
+                        <p>Cyber criminals now have the expertise and tools necessary to take down critical infrastructure and systems. Their tools and techniques continue to evolve.<br><br>Cyber criminals are taking malware to unprecedented levels of sophistication
+                            and impact. They are becoming more adept at using stealth and evasion techniques to hide their activity. Lastly, cyber criminals are exploiting undefended gaps in security.<br><br>Network security breaches can disrupt e-commerce,
+                            cause the loss of business data, threaten people’s privacy, and compromise the integrity of information. These breaches can result in lost revenue for corporations, theft of intellectual property, lawsuits, and can even threaten
+                            public safety.<br><br>Maintaining a secure network ensures the safety of network users and protects commercial interests. Organizations need individuals who can recognize the speed and scale at which adversaries are amassing
+                            and refining their cyber weaponry. All users should be aware of security terms in the table.<br><br></p>
+                        <table class="table table-success table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><br> Security Terms<br></th>
+                                    <th scope="col"><br> Description<br></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><br>Assets <br></th>
+                                    <td><br>An asset is anything of value to the organization. It includes people, equipment, resources, and data. <br></td>
+                                </tr>
+                                <tr>
+                                    <th><br> Vulnerability <br></th>
+                                    <td><br> A vulnerability is a weakness in a system, or its design, that could be exploited by a threat. <br></td>
+                                </tr>
+                                <tr>
+                                    <th><br> Threat <br></th>
+                                    <td><br> A threat is a potential danger to a company’s assets, data, or network functionality. <br></td>
+                                </tr>
+                                <tr>
+                                    <th><br>Exploit <br></th>
+                                    <td><br> An exploit is a mechanism that takes advantage of a vulnerability. <br></td>
+                                </tr>
+                                <tr>
+                                    <th><br> Mitigation <br></th>
+                                    <td><br> Mitigation is the counter-measure that reduces the likelihood or severity of a potential threat or risk. Network security involves multiple mitigation techniques. <br></td>
+                                </tr>
+                                <tr>
+                                    <th><br> Risk <br></th>
+                                    <td><br> Risk is the likelihood of a threat to exploit the vulnerability of an asset, with the aim of negatively affecting an organization. Risk is measured using the probability of the occurrence of an event and its consequences.
+                                        <br></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <p><br><br>Assets must be identified and protected. Vulnerabilities must be addressed before they become a threat and are exploited. Mitigation techniques are required before, during, and after an attack.<br><br></p>
+                    </div>
+                </div>
+                <div id="item-2-2">
+                    <h3>2.2 Vectors of Network Attacks</h3>
+                    <p>An attack vector is a path by which a threat actor can gain access to a server, host, or network. Attack vectors originate from inside or outside the corporate network, as shown in the figure. For example, threat actors may target
+                        a network through the internet, to disrupt network operations and create a denial of service (DoS) attack.
+                        <br<br></p>
+                    <h7>External and Internal Threats</h7>
+                    <p>An internal user, such as an employee, can accidentally or intentionally:<br><br>
+                    </p>
+                    <ul>
+                        <li>Steal and copy confidential data to removable media, email, messaging software, and other media.</li>
+                        <li>Compromise internal servers or network infrastructure devices.</li>
+                        <li>Disconnect a critical network connection and cause a network outage.</li>
+                        <li>Connect an infected USB drive into a corporate computer system.</li>
+                    </ul><br>
+                    <p>Internal threats have the potential to cause greater damage than external threats because internal users have direct access to the building and its infrastructure devices. Employees may also have knowledge of the corporate network,
+                        its resources, and its confidential data.<br><br>Network security professionals must implement tools and apply techniques for mitigating both external and internal threats.</p>
+
+                </div>
+                <div id="item-2-3">
+                    <h3>2.3 Data Loss</h3>
+                    <p>Data is likely to be an organization’s most valuable asset. Organizational data can include research and development data, sales data, financial data, human resource and legal data, employee data, contractor data, and customer data.<br><br>Data
+                        loss or data exfiltration is when data is intentionally or unintentionally lost, stolen, or leaked to the outside world.<br><br> The data loss can result in:
+                    </p><br><br>
+                    <ul>
+                        <li>Brand damage and loss of reputation</li>
+                        <li>Loss of competitive advantage</li>
+                        <li>Loss of customers</li>
+                        <li>Loss of revenue</li>
+                        <li>Litigation/legal action resulting in fines and civil penalties</li>
+                        <li>Significant cost and effort to notify affected parties and recover from the breach</li>
+                    </ul>
+                    <h7>Common data loss vectors are displayed in the table.<br><br></h7>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><br> Data Loss Vectors<br></th>
+                                <th scope="col"><br> Description<br></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><br>Email/Social Networking <br></th>
+                                <td><br>Intercepted email or IM messages could be captured and reveal confidential information. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Unencrypted Devices <br></th>
+                                <td><br>If the data is not stored using an encryption algorithm, then the thief can retrieve valuable confidential data. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Cloud Storage Devices <br></th>
+                                <td><br> Sensitive data can be lost if access to the cloud is compromised due to weak security settings. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Removable Media <br></th>
+                                <td><br>One risk is that an employee could perform an unauthorized transfer of data to a USB drive. Another risk is that a USB drive containing valuable corporate data could be lost. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Hard Copy <br></th>
+                                <td><br>Confidential data should be shredded w<br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Improper Access Control <br></th>
+                                <td><br>Passwords or weak passwords which have been compromised can provide a threat actor with easy acce <br></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div id="item-3-1">
+                    <h3>3.1 The Hacker</h3>
+                    <p>In the previous topic, you gained a high-level look at the current landscape of cybersecurity, including the types of threats and vulnerabilities that plague all network administrators and architects. In this topic, you will learn
+                        more details about particular types of threat actors.<br><br>Hacker is a common term used to describe a threat actor. Originally the term referred to someone who was a skilled computer expert such as a programmer and a hack was
+                        a clever solution. The term later evolved into what we know of it today.<br><br>As shown in the table, the terms white hat hacker, black hat hacker, and gray hat hacker are often used to describe a type of hacker.</p>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><br> Hacker Type<br></th>
+                                <th scope="col"><br> Description<br></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><br>White Hat Hackers <br></th>
+                                <td><br>These are ethical hackers who use their programming skills for good, ethical, and legal purposes. White hat hackers may perform network penetration tests in an attempt to compromise networks and systems by using their
+                                    knowledge of computer security systems to discover network vulnerabilities. Security vulnerabilities are reported to developers for them to fix before the vulnerabilities can be exploited. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Gray Hat Hackers <br></th>
+                                <td><br>These are individuals who commit crimes and do arguably unethical things, but not for personal gain or to cause damage. Gray hat hackers may disclose a vulnerability to the affected organization after having compromised
+                                    their network. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Black Hat Hackers <br></th>
+                                <td><br>These are unethical criminals who compromise computer and network security for personal gain, or for malicious reasons, such as attacking networks.<br></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="item-3-2">
+                    <h3>3.2 Evolution of Hackers</h3>
+                    <p>Hacking started in the 1960s with phone freaking, or phreaking, which refers to using audio frequencies to manipulate phone systems. At that time, telephone switches used various tones to indicate different functions. Early hackers
+                        realized that by mimicking a tone using a whistle, they could exploit the phone switches to make free long-distance calls.<br><br>In the mid-1980s, computer dial-up modems were used to connect computers to networks. Hackers wrote
+                        “war dialing” programs which dialed each telephone number in a given area in search of computers. When a computer was found, password-cracking programs were used to gain access.</p>
+                </div>
+                <div id="item-3-3">
+                    <h3>3.3 Cyber Criminals</h3>
+                    <p>It is estimated that cyber criminals steal billions of dollars from consumers and businesses. Cyber criminals operate in an underground economy where they buy, sell, and trade attack toolkits, zero day exploit code, botnet services,
+                        banking Trojans, keyloggers, and much more. They also buy and sell the private information and intellectual property they steal. Cyber criminals target small businesses and consumers, as well as large enterprises and entire industries.</p>
+                </div>
+                <div id="item-3-4">
+                    <h3>3.4 Hacktivists</h3>
+                    <p>Two examples of hacktivist groups are Anonymous and the Syrian Electronic Army. Although most hacktivist groups are not well organized, they can cause significant problems for governments and businesses. Hacktivists tend to rely on
+                        fairly basic, freely available tools.</p>
+                </div>
+                <div id="item-3-5">
+                    <h3>3.5 State-Sponsored Hackers</h3>
+                    <p>State-sponsored hackers create advanced, customized attack code, often using previously undiscovered software vulnerabilities called zero-day vulnerabilities. An example of a state-sponsored attack involves the Stuxnet malware that
+                        was created to damage Iran’s nuclear enrichment capabilities.</p>
+                </div>
+                <div id="item-4-1">
+                    <h3>4.1 Overview of Malware</h3>
+                    <p>Now that you know about the tools that hacker use, this topic introduces you to different types of malware that hackers use to gain access to end devices.<br><br>End devices are particularly prone to malware attacks. It is important
+                        to know about malware because threat actors rely on users to install malware to help exploit the security gaps.<br></p>
+
+                </div>
+                <div id="item-4-2">
+                    <h3>4.2 Viruses and Trojan Horses</h3>
+                    <p>The first and most common type of computer malware is a virus. Viruses require human action to propagate and infect other computers. For example, a virus can infect a computer when a victim opens an email attachment, opens a file on
+                        a USB drive, or downloads a file.<br><br>The virus hides by attaching itself to computer code, software, or documents on the computer. When opened, the virus executes and infects the computer </p>
+                    <h7>Viruses can:</h7>
+                    <ul>
+                        <li>Alter, corrupt, delete files, or erase entire drives.</li>
+                        <li>Cause computer booting issues, and corrupt applications.</li>
+                        <li>Access and use email accounts to spread.</li>
+                    </ul>
+                    <h7>Modern viruses are developed for specific intent such as those listed in the table.<br><br></h7>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><br> Types of Viruses<br></th>
+                                <th scope="col"><br> Description<br></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><br>Boot sector virus <br></th>
+                                <td><br>Virus attacks the boot sector, file partition table, or file system. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br> Firmware virus<br></th>
+                                <td><br> Virus attacks the device firmware.<br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Macro virus <br></th>
+                                <td><br> Virus uses the MS Office or other applications macro feature maliciously.<br></td>
+                            </tr>
+                            <tr>
+                                <th><br> Program virus<br></th>
+                                <td><br>Virus inserts itself in another executable program. <br></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Threat actors use Trojan horses to compromise hosts. A Trojan horse is a program that looks useful but also carries malicious code. Trojan horses are often provided with free online programs such as computer games. Unsuspecting users
+                        download and install the game, along with the Trojan horse.<br><br></p>
+                    <h7>There are several types of Trojan horses as described in the table.</h7>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><br> Type of Trojan Horse<br></th>
+                                <th scope="col"><br> Description<br></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><br>Remote-access <br></th>
+                                <td><br>Virus attacks the boot sector, file partition table, or file system. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Data-sending <br></th>
+                                <td><br>Trojan horse provides the threat actor with sensitive data, such as passwords. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Destructive <br></th>
+                                <td><br>Trojan horse corrupts or deletes files. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>FTP <br></th>
+                                <td><br>Trojan horse enables unauthorized file transfer services on end devices. <br></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Viruses and Trojan horses are only two types of malware that threat actors use. There are many other types of malware that have been designed for specific purposes.<br></p>
+                </div>
+                <div id="item-5-1">
+                    <h3>5.1 IPv4 and IPv6</h3>
+                    <p>IP does not validate whether the source IP address contained in a packet actually came from that source. For this reason, threat actors can send packets using a spoofed source IP address. Threat actors can also tamper with the other
+                        fields in the IP header to carry out their attacks. Security analysts must understand the different fields in both the IPv4 and IPv6 headers.<br><br> Some of the more common IP related attacks are shown in the table.
+                    </p>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"><br> IP Attack Techniques<br></th>
+                                <th scope="col"><br> Description<br></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><br>ICMP attacks <br></th>
+                                <td><br>Threat actors use Internet Control Message Protocol (ICMP) echo packets (pings) to discover subnets and hosts on a protected network, to generate DoS flood attacks, and to alter host routing tables. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Amplification and reflection attacks <br></th>
+                                <td><br>Threat actors spoof the source IP address in an IP packet to perform blind spoofing or non-blind spoofing. <br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Man-in-the-middle attack (MITM) <br></th>
+                                <td><br>Threat actors position themselves between a source and destination to transparently monitor, capture, and control the communication. They could eavesdrop by inspecting captured packets, or alter packets and forward
+                                    them to their original destination.<br></td>
+                            </tr>
+                            <tr>
+                                <th><br>Session hijacking <br></th>
+                                <td><br>Threat actors gain access to the physical network, and then use an MITM attack to hijack a session.<br></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="item-5-2">
+                    <h3>5.2 ICMP Attacks</h3>
+                    <p>Threat actors use ICMP for reconnaissance and scanning attacks. They can launch information-gathering attacks to map out a network topology, discover which hosts are active (reachable), identify the host operating system (OS fingerprinting),
+                        and determine the state of a firewall. Threat actors also use ICMP for DoS attacks.<br><br><strong>Note: </strong> ICMP for IPv4 (ICMPv4) and ICMP for IPv6 (ICMPv6) are susceptible to similar types of attacks.<br><br>Networks should
+                        have strict ICMP access control list (ACL) filtering on the network edge to avoid ICMP probing from the internet. Security analysts should be able to detect ICMP-related attacks by looking at captured traffic and log files. In
+                        the case of large networks, security devices such as firewalls and intrusion detection systems (IDS) detect such attacks and generate alerts to the security analysts.</p>
+                </div>
+                <div id="item-5-3">
+                    <h3>5.3 Viruses and Trojan Horses</h3>
+                    <p>Threat actors often use amplification and reflection techniques to create DoS attacks. The example in the figure illustrates how an amplification and reflection technique called a Smurf attack is used to overwhelm a target host.<br><br><strong>Note: </strong>Newer
+                        forms of amplification and reflection attacks such as DNS-based reflection and amplification attacks and Network Time Protocol (NTP) amplification attacks are now being used.<br><br>Threat actors also use resource exhaustion attacks.
+                        These attacks consume the resources of a target host to either to crash it or to consume the resources of a network.</p>
+                </div>
+                <div id="item-5-4">
+                    <h3>5.4 Address Spoofing Attacks</h3>
+                    <p>IP address spoofing attacks occur when a threat actor creates packets with false source IP address information to either hide the identity of the sender, or to pose as another legitimate user. The threat actor can then gain access
+                        to otherwise inaccessible data or circumvent security configurations. Spoofing is usually incorporated into another attack such as a Smurf attack.<br><br> Spoofing attacks can be non-blind or blind:<br><br>
+
+                        <strong>. Non-blind spoofing </strong>- The threat actor can see the traffic that is being sent between the host and the target. The threat actor uses non-blind spoofing to inspect the reply packet from the target victim. Non-blind
+                        spoofing determines the state of a firewall and sequence-number prediction. It can also hijack an authorized session.<br><br>
+                        <strong>. Blind spoofing </strong>- The threat actor cannot see the traffic that is being sent between the host and the target. Blind spoofing is used in DoS attacks.<br><br> MAC address spoofing attacks are used when threat actors
+                        have access to the internal network. Threat actors alter the MAC address of their host to match another known MAC address of a target host, as shown in the figure. The attacking host then sends a frame throughout the network with
+                        the newly-configured MAC address. When the switch receives the frame, it examines the source MAC address.</p>
+                </div>
+                <div id="item-6-1">
+                    <h3>6.1 TCP Segment Header</h3>
+                    <p>While some attacks target IP, this topic discusses attacks that target TCP and UDP.
+                        <br><br> TCP segment information appears immediately after the IP header.</p>
+                </div>
+                <div id="item-6-2">
+                    <h3>6.2 TCP Services</h3>
+                    <h7>TCP provides these services:</h7>
+                    <ul>
+                        <li>
+                            <bold>Reliable delivery</bold> - TCP incorporates acknowledgments to guarantee delivery, instead of relying on upper-layer protocols to detect and resolve errors. If a timely acknowledgment is not received, the sender retransmits
+                            the data. Requiring acknowledgments of received data can cause substantial delays. Examples of application layer protocols that make use of TCP reliability include HTTP, SSL/TLS, FTP, DNS zone transfers, and others.</li>
+                        <li><strong>Flow control </strong>- TCP implements flow control to address this issue. Rather than acknowledge one segment at a time, multiple segments can be acknowledged with a single acknowledgment segment.</li>
+                        <li><strong>Stateful communication</strong> - TCP stateful communication between two parties occurs during the TCP three-way handshake. Before data can be transferred using TCP, a three-way handshake opens the TCP connection, as shown
+                            in the figure. If both sides agree to the TCP connection, data can be sent and received by both parties using TCP.</li>
+                    </ul>
+                </div>
+                <div id="item-6-3">
+                    <h3>6.3 TCP Attacks</h3>
+                    <p>Network applications use TCP or UDP ports. Threat actors conduct port scans of target devices to discover which services they offer.<br><br><strong>TCP SYN Flood Attack</strong>
+                        <br><br>The TCP SYN Flood attack exploits the TCP three-way handshake. The figure shows a threat actor continually sending TCP SYN session request packets with a randomly spoofed source IP address to a target. The target device
+                        replies with a TCP SYN-ACK packet to the spoofed IP address and waits for a TCP ACK packet. Those responses never arrive. Eventually the target host is overwhelmed with half-open TCP connections, and TCP services are denied to
+                        legitimate users. TCP Reset Attack<br><br>A TCP reset attack can be used to terminate TCP communications between two hosts. TCP can terminate a connection in a civilized (i.e., normal) manner and uncivilized (i.e., abrupt) manner.<br><br>The
+                        figure displays the civilized manner when TCP uses a four-way exchange consisting of a pair of FIN and ACK segments from each TCP endpoint to close the TCP connection.<br><br>The uncivilized manner is when a host receives an TCP
+                        segment with the RST bit set. This is an abrupt way to tear down the TCP connection and inform the receiving host to immediately stop using the TCP connection.<br><br>A threat actor could do a TCP reset attack and send a spoofed
+                        packet containing a TCP RST to one or both endpoints.<br><br>
+                        <strong> Session Hijacking</strong>
+                        <br><br> TCP session hijacking is another TCP vulnerability. Although difficult to conduct, a threat actor takes over an already-authenticated host as it communicates with the target. The threat actor must spoof the IP address
+                        of one host, predict the next sequence number, and send an ACK to the other host. If successful, the threat actor could send, but not receive, data from the target device.<br><br></p>
+
+                </div>
+                <div id="item-6-4">
+                    <h3>6.4 UDP Segment Header and Operation</h3>
+                    <p>UDP is commonly used by DNS, TFTP, NFS, and SNMP. It is also used with real-time applications such as media streaming or VoIP. UDP is a connectionless transport layer protocol. It has much lower overhead than TCP because it is not
+                        connection-oriented and does not offer the sophisticated retransmission, sequencing, and flow control mechanisms that provide reliability. The UDP segment structure, shown in the figure, is much smaller than TCP’s segment structure.<br><br>Although
+                        UPD is normally called unreliable, in contrast to TCP’s reliability, this does not mean that applications that use UDP are always unreliable, nor does it mean that UDP is an inferior protocol. It means that these functions are
+                        not provided by the transport layer protocol and must be implemented elsewhere if required.
+                        <br><br> The low overhead of UDP makes it very desirable for protocols that make simple request and reply transactions. For example, using TCP for DHCP would introduce unnecessary network traffic. If no response is received, the
+                        device resends the request.</p>
+                </div>
+                <div id="item-6-5">
+                    <h3>6.5 UDP Attacks</h3>
+                    <p>UDP is not protected by any encryption. You can add encryption to UDP, but it is not available by default. The lack of encryption means that anyone can see the traffic, change it, and send it on to its destination. Changing the data
+                        in the traffic will alter the 16-bit checksum, but the checksum is optional and is not always used. When the checksum is used, the threat actor can create a new checksum based on the new data payload, and then record it in the
+                        header as a new checksum. The destination device will find that the checksum matches the data without knowing that the data has been altered. This type of attack is not widely used.<br><br><strong>UDP Flood Attacks</strong><br><br>You
+                        are more likely to see a UDP flood attack. In a UDP flood attack, all the resources on a network are consumed. The threat actor must use a tool like UDP Unicorn or Low Orbit Ion Cannon. These tools send a flood of UDP packets,
+                        often from a spoofed host, to a server on the subnet. The program will sweep through all the known ports trying to find closed ports. This will cause the server to reply with an ICMP port unreachable message. Because there are
+                        many closed ports on the server, this creates a lot of traffic on the segment, which uses up most of the bandwidth. The result is very similar to a DoS attack.<br></p>
+                </div>
+                <div id="item-7-1">
+                    <h3>7.1 ARP Vulnerabilities</h3>
+                    <p>Earlier in this module you learned about vulnerabilities with IP, TCP and UDP. The TCP/IP protocol suite was never built for security. Therefore, the services that IP uses for addressing functions such as ARP, DNS, and DHCP, are also
+                        not secure, as you will learn in this topic.
+                        <br><br> Hosts broadcast an ARP Request to other hosts on the segment to determine the MAC address of a host with a particular IP address. All hosts on the subnet receive and process the ARP Request. The host with the matching
+                        IP address in the ARP Request sends an ARP Reply.<br><br>Any client can send an unsolicited ARP Reply called a “gratuitous ARP.” This is often done when a device first boots up to inform all other devices on the local network of
+                        the new device’s MAC address. When a host sends a gratuitous ARP, other hosts on the subnet store the MAC address and IP address contained in the gratuitous ARP in their ARP tables.<br><br> This feature of ARP also means that any
+                        host can claim to be the owner of any IP or MAC. A threat actor can poison the ARP cache of devices on the local network, creating an MITM attack to redirect traffic. The goal is to target a victim host, and have it change its
+                        default gateway to the threat actor’s device. This positions the threat actor in between the victim and all other systems outside of the local subnet.<br></p>
+                </div>
+                <div id="item-7-2">
+                    <h3>7.2 DNS Attacks</h3>
+                    <p>The Domain Name System (DNS) protocol defines an automated service that matches resource names, such as cisco,with the required numeric network address, such as the IPv4 or IPv6 address. It includes the format for queries, responses,
+                        and data and uses resource records (RR) to identify the type of DNS response.
+                        <br><br> Securing DNS is often overlooked. However, it is crucial to the operation of a network and should be secured accordingly.</p>
+                    <br><br>
+                    <h7>DNS attacks include the following:<br><br></h7>
+                    <ul>
+                        <li>DNS open resolver attacks</li>
+                        <li>DNS stealth attacks</li>
+                        <li>DNS domain shadowing attacks</li>
+                        <li>DNS tunneling attacks</li>
+                    </ul>
+                    <p><br><strong> Open Resolver Attacks</strong><br><br> Many organizations use the services of publicly open DNS servers such as GoogleDNS (8.8.8.8) to provide responses to queries. This type of DNS server is called an open resolver. A
+                        DNS open resolver answers queries from clients outside of its administrative domain.<br><br>
+                        <strong> DNS Domain Shadowing Attacks</strong>
+                        <br><br> Domain shadowing involves the threat actor gathering domain account credentials in order to silently create multiple sub-domains to be used during the attacks. These subdomains typically point to malicious servers without
+                        alerting the actual owner of the parent domain.<br>
+                    </p>
+                </div>
+                <div id="item-7-3">
+                    <h3>7.3 DNS Tunneling</h3>
+                    <p>Threat actors who use DNS tunneling place non-DNS traffic within DNS traffic. This method often circumvents security solutions when a threat actor wishes to communicate with bots inside a protected network, or exfiltrate data from
+                        the organization, such as a password database. When the threat actor uses DNS tunneling, the different types of DNS records are altered. This is how DNS tunneling works for CnC commands sent to a botnet:<br><br></p>
+                    <ol>
+                        <li>The command data is split into multiple encoded chunks.</li>
+                        <li>Each chunk is placed into a lower level domain name label of the DNS query.</li>
+                        <li>Because there is no response from the local or networked DNS for the query, the request is sent to the ISP’s recursive DNS servers.</li>
+                        <li>The recursive DNS service will forward the query to the threat actor’s authoritative name server.</li>
+                        <li>The process is repeated until all the queries containing the chunks of are sent.</li>
+                        <li>When the threat actor’s authoritative name server receives the DNS queries from the infected devices, it sends responses for each DNS query, which contain the encapsulated, encoded CnC commands.</li>
+                        <li>The malware on the compromised host recombines the chunks and executes the commands hidden within the DNS record.</li>
+                    </ol>
+                    <p>To stop DNS tunneling, the network administrator must use a filter that inspects DNS traffic. Pay close attention to DNS queries that are longer than average, or those that have a suspicious domain name. DNS solutions, like Cisco OpenDNS,
+                        block much of the DNS tunneling traffic by identifying suspicious domains.</p>
+                </div>
+                <div id="item-7-4">
+                    <h3>7.4 DHCP Attacks </h3>
+                    <p><strong>DHCP Spoofing Attack</strong><br><br>A DHCP spoofing attack occurs when a rogue DHCP server is connected to the network and provides false IP configuration parameters to legitimate clients. A rogue server can provide a variety
+                        of misleading information:<br><br></p>
+                    <ul>
+                        <li><strong>Wrong default gateway -</strong>Threat actor provides an invalid gateway, or the IP address of its host to create a MITM attack. This may go entirely undetected as the intruder intercepts the data flow through the network.</li>
+                        <li><strong>Wrong DNS server -</strong>Threat actor provides an incorrect DNS server address pointing the user to a malicious website.</li>
+                        <li><strong>Wrong IP address -</strong>Threat actor provides an invalid IP address, invalid default gateway IP address, or both. The threat actor then creates a DoS attack on the DHCP client.</li>
+                    </ul>
+                </div>
+                <div id="item-8-1">
+                    <h3>8.1 Securing Communications</h3>
+                    <p>Organizations must provide support to secure the data as it travels across links. This may include internal traffic, but it is even more important to protect the data that travels outside of the organization to branch sites, telecommuter
+                        sites, and partner sites.<br><br></p>
+                    <h7>These are the four elements of secure communications:</h7>
+                    <ul>
+                        <li><strong>Data Integrity -</strong>Guarantees that the message was not altered. Any changes to data in transit will be detected. Integrity is ensured by implementing either of the Secure Hash Algorithms (SHA-2 or SHA-3). The MD5
+                            message digest algorithm is still widely in use but it is inherently insecure and creates vulnerabilities in a network. The use of MD5 should be avoided.</li>
+                        <li><strong>Origin Authentication -</strong>Guarantees that the message is not a forgery and does actually come from whom it states. Many modern networks ensure authentication with protocols, such as hash message authentication code
+                            (HMAC).
+                        </li>
+                        <li><strong>Data Confidentiality -</strong>Guarantees that only authorized users can read the message. If the message is intercepted, it cannot be deciphered within a reasonable amount of time. Data confidentiality is implemented using
+                            symmetric and asymmetric encryption algorithms.</li>
+                        <li><strong>Data Non-Repudiation  -</strong>Guarantees that the sender cannot repudiate, or refute, the validity of a message sent. Nonrepudiation relies on the fact that only the sender has the unique characteristics or signature
+                            for how that message is treated.</li>
+                    </ul>
+                </div>
+                <div id="item-8-2">
+                    <h3>8.2 Hash Functions</h3>
+                    <p>There are four well-known hash functions.
+                        <br><br>
+                        <storng>
+                            MD5 with 128-bit Digest
+                        </storng><br><br> Developed by Ron Rivest and used in a variety of internet applications, MD5 is a one-way function that produces a 128-bit hashed message. MD5 is considered to be a legacy algorithm and should be avoided and used
+                        only when no better alternatives are available. It is recommended that SHA-2 or SHA-3 be used instead.<br><br>
+                        <strong>SHA Hashing Algorithm</strong><br><br>Developed by the U.S. National Security Agency (NSA) in 1995. It is very similar to the MD5 hash functions. Several versions exist. SHA-1 creates a 160-bit hashed message and is slightly
+                        slower than MD5. SHA-1 has known flaws and is a legacy algorithm.<br><br><strong>SHA-2</strong><br><br> Developed by the NSA. It includes SHA-224 (224 bit), SHA-256 (256 bit), SHA-384 (384 bit), and SHA-512 (512 bit). If you are
+                        using SHA-2, then the SHA-256, SHA-384, and SHA-512 algorithms should be used whenever possible.<br><br><strong>SHA-3</strong><br><br>SHA-3 is the newest hashing algorithm and was introduced by NIST as an alternative and eventual
+                        replacement for the SHA-2 family of hashing algorithms. SHA-3 includes SHA3-224 (224 bit), SHA3-256 (256 bit), SHA3-384 (384 bit), and SHA3-512 (512 bit). The SHA-3 family are next-generation algorithms and should be used whenever
+                        possible. While hashing can be used to detect accidental changes, it cannot be used to guard against deliberate changes that are made by a threat actor. There is no unique identifying information from the sender in the hashing
+                        procedure. This means that anyone can compute a hash for any data, as long as they have the correct hash function. For example, when the message traverses the network, a potential attacker could intercept the message, change it,
+                        recalculate the hash, and append it to the message. The receiving device will only validate against whatever hash is appended. Therefore, hashing is vulnerable to man-in-the-middle attacks and does not provide security to transmitted
+                        data. To provide integrity and origin authentication, something more is required.<br><br>
+                    </p>
+                </div>
+                <div id="item-8-3">
+                    <h3>8.3 Origin Authentication</h3>
+                    <p>To add authentication to integrity assurance, use a keyed-hash message authentication code (HMAC). HMAC uses an additional secret key as input to the hash function.<br><br>Only the sender and the receiver know the secret key, and the
+                        output of the hash function now depends on the input data and the secret key. Only parties who have access to that secret key can compute the digest of an HMAC function. This defeats man-in-the-middle attacks and provides authentication
+                        of the data origin.
+                        <br><br> If two parties share a secret key and use HMAC functions for authentication, a properly constructed HMAC digest of a message that a party has received indicates that the other party was the originator of the message. This
+                        is because the other party possesses the secret key.</p>
+                </div>
+                <div id="item-8-4">
+                    <h3>8.4 Data Confidentiality</h3>
+                    <p>There are two classes of encryption used to provide data confidentiality. These two classes differ in how they use keys.<br><br> Symmetric encryption algorithms such as Data Encryption Standard (DES), 3DES, and Advanced Encryption
+                        Standard (AES) are based on the premise that each communicating party knows the pre-shared key. Data confidentiality can also be ensured using asymmetric algorithms, including Rivest, Shamir, and Adleman (RSA) and the public key
+                        infrastructure (PKI). <br><br> <strong> Note:</strong> DES is a legacy algorithm and should not be used. 3DES should be avoided if possible. The figure highlights some differences between each encryption algorithm method.</p>
+                </div>
+                <div id="item-8-5">
+                    <h3>8.5 Diffie-Hellman</h3>
+                    <p>Diffie-Hellman (DH) is an asymmetric mathematical algorithm where two computers generate an identical shared secret key without having communicated before. The new shared key is never actually exchanged between the sender and receiver.
+                        However, because both parties know it, the key can be used by an encryption algorithm to encrypt traffic between the two systems.</p><br><br>
+                    <h7>Here are three examples of instances when DH is commonly used:<br><br></h7>
+                    <ul>
+                        <li>Data is exchanged using an IPsec VPN.</li>
+                        <li>Used when data is exchanged using an SSL or TLS VPN.</li>
+                        <li>SSH data is exchanged.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

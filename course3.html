@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* ... Your CSS styles ... */
+        .row .division {
+            border: 0.5px solid #000;
+            box-shadow: #000;
+        }
+
+        .studycontent {
+            margin: 4px;
+            padding: 6px;
+        }
+
+        p {
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: rgb(245, 245, 245);
+            padding: 5px;
+        }
+
+        h5 {
+            margin-top: 14px;
+
+        }
+
+        #logo {
+            height: 20px;
+            width: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headersec">
+        <!-- ... Your navigation bar ... -->
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <img id="logo" class="img-fluid md-mx-3 mx-5" src="imgs\SHlogo.png" alt="">
+            <b class="bold">CyberHub<small></small> </b>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="category.html">Back to Courses</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#freecourses">Free courses</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paidcourses">Paid courses</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">About</a>
+                    </li>
+                    -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="division col-lg-2">
+            <ul>
+                <h5>Topics covered</h5>
+                <li>What is Cybersecurity?</li>
+                <li>What do cybercriminals do</li>
+                <li>Strategies to withstand</li>
+                <li>Let's join with us</li>
+            </ul>
+        </div>
+        <div class="division col-lg-10 order-2 order-sm-2">
+            <div class="studycontent">
+                <div id="contentContainer">
+                    <!-- Content will be rendered here dynamically -->
+                </div>
+                <div class="morecontent">
+                    <button id="prevButton" class="btn btn-warning float-right">previous</button>
+                    <button id="nextButton" class="btn btn-success float-right">next</button>
+                    <button id="completedButton" class="btn btn-primary float-right"
+                        style="display: none;">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const topics = [
+            {
+                title: "What is Cybersecurity?",
+                content: "Cybersecurity is the ongoing effort to protect individuals, organizations and governments from digital attacks by protecting networked systems and data from unauthorized use or harm. Protecting Your Personal Data: ersonal data is any information that can be used to identify you, and it can exist both offline and online. Personal data describes any information about you, including your name, social security number, driver license number, date and place of birth, your mother’s maiden name, and even pictures or messages that you exchange with family and friends. Cybercriminals can use this sensitive information to identify and impersonate you, infringing on your privacy and potentially causing serious damage to your reputation. What Do Hackers Want? So, with all this information about you available online, what do hackers want? Of course, they want your money. Can you think of an example that you have experienced yourself or that you have heard or read about, where cybercriminals have accessed or tried to access financial information online?"
+            },
+            {
+                title: "What do cybercriminals do...",
+                content: "Think of your computer or smartphone as your kingdom, and your data as the treasure within it. Cybercriminals are like thieves who want to steal your treasure. They use tricky tactics, like sending fake messages or trying to guess your passwords, to break into your kingdom and take your treasure."
+            },
+            {
+                title: "Strategies to withstand...",
+                content: "To defend against these cybercriminals, we use special tools and strategies. We create strong and unique passwords for our accounts, install shields called antivirus software to catch bad programs, and build walls with firewalls to block sneaky intruders."
+            },
+            {
+                title: "Let's join with us...",
+                content: "In this journey, you'll learn about different types of cyber threats, how to use encryption to keep secrets safe, and ways to stay alert against tricky schemes. By following cybersecurity practices, you become the hero of your own digital adventure, safeguarding your treasure and exploring the online realm safely. Remember, just like in any adventure, learning about cybersecurity takes time and practice, but with each step, you become better equipped to defend your kingdom and enjoy the wonders of the digital universe."
+            }
+        ];
+
+        const contentContainer = document.getElementById("contentContainer");
+        const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+        const completedButton = document.getElementById("completedButton");
+
+        let currentTopicIndex = 0;
+        let courseCompleted = 0;
+
+        function renderContent() {
+            const currentTopic = topics[currentTopicIndex];
+            const contentHTML = `
+            <h5>${currentTopic.title}</h5>
+            <p>${currentTopic.content}</p>
+        `;
+            contentContainer.innerHTML = contentHTML;
+
+            // Show/hide Completed button based on index
+            if (currentTopicIndex === topics.length - 1) {
+                completedButton.style.display = "inline-block";
+                courseCompleted = 1;
+            } else {
+                completedButton.style.display = "none";
+            }
+        }
+
+        prevButton.addEventListener("click", () => {
+            if (currentTopicIndex > 0) {
+                currentTopicIndex--;
+                renderContent();
+            }
+        });
+
+        nextButton.addEventListener("click", () => {
+            if (currentTopicIndex < topics.length - 1) {
+                currentTopicIndex++;
+                renderContent();
+            }
+        });
+
+        completedButton.addEventListener("click", () => {
+            // Redirect to a new page when Completed button is clicked
+            window.location.href = "category.html"; // Replace with your desired URL
+        });
+
+        renderContent();
+    </script>
+</body>
+
+</html>

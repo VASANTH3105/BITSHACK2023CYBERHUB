@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #logo {
+            height: 20px;
+            width: 30px;
+        }
+
+        h3 {
+            margin-top: 15px;
+        }
+
+        p {
+            background-color: aliceblue;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--nav bar-->
+
+
+
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <img id="logo" class="img-fluid md-mx-3 mx-5" src="imgs\SHlogo.png" alt="">
+        <b class="bold">CyberHub<small></small> </b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.php">My learning path</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carreirguide.html">Career Guidance</a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#paidcourses">Paid courses</a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid col-12 mt-lg-4 p-4">
+        <div class="row">
+            <div id="titles" class="col-lg-3 clo-md-4 order-1 col-12">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link bg-black text-light" href="#item-1">The World of cybersecurity</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">What is cybersecurity?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Protecting your Personal data</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-3">Your Online Identity</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-4">Your Data</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-5">Where is your data</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-6">What do hacker want?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-7">Identity theft</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-8">Who else wants my Data?</a>
+
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-2">Organizational Data</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-2-1">Types of Organizational Data</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-2">The cube</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-4">Data Security Breaches</a>
+                            <a class="nav-link ms-3 my-1" href="#item-2-5">Consequences of a Security Breach</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-3">Cyber Attackers</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Types of Attackers</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">What color is my Hat?</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-3">Internal and External Threads</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-4">What do you Think?</a>
+                        </nav>
+                        <a class="nav-link bg-black text-light" href="#item-3">Cyberwarfare</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Sign of the Times(Stuxnet)</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">The purpose of Cyberwarfare</a>
+
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+
+            <div id="contents" class="col-lg-9 clo-md-8 order-2 col-12">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+                    <div id="item-1">
+                        <h3>Course Introduction</h3>
+                        <p>Welcome to the Introduction to Cybersecurity course. This course consists of five modules and
+                            a final exam and should take you approximately six hours to complete. You can determine how
+                            much or how little of the course that you want to do at one time. If you leave and come
+                            back, don’t worry! Your progress will be automatically saved so that you can exit and easily
+                            pick up where you left off the next time you login. The course can be accessed on any
+                            desktop computer, laptop, tablet or mobile device with a modern web browser and includes a
+                            range of interactive components and videos, practical activities, knowledge resources and
+                            quizzes, all designed to help you explore cybersecurity as a potential career.</p>
+                        <br>
+                        <p>On completing this course, you will be able to:</p>
+                        <ul>
+                            <li>Explain the basics of being safe online, including what cybersecurity is and its
+                                potential impact.</li>
+                            <li>Explain the most common cyber threats, attacks and vulnerabilities.</li>
+                            <li>Explain how organizations can protect their operations against these attacks.</li>
+                            <li>Access various information and resources to explore the different career options in
+                                cybersecurity.</li>
+                        </ul>
+
+                    </div>
+                    <div id="item-1-1">
+                        <h3>What is cybersecurity?</h3>
+                        <p>Cybersecurity is the ongoing effort to protect individuals, organizations and governments
+                            from digital attacks by protecting networked systems and data from unauthorized use or harm.
+                        </p>
+
+                    </div>
+                    <div id="item-1-2">
+                        <h3>Protecting your Personal data</h3>
+                        <p>Personal data is any information that can be used to identify you, and it can exist both
+                            offline and online. <br>Many people think that if they don’t have any social media or online
+                            accounts set up, then they don’t have an online identity. This is not the case. If you use
+                            the web, you have an online identity.</p>
+                    </div>
+                    <div id="item-1-3">
+                        <h3>Your Online Identity
+                        </h3>
+                        <p>It’s your first day on the job, and it’s time to choose a username for your online identity.
+                            Which of the following options would you choose?
+                            <br>
+                            This is your first chance to gain some valuable defender points at eLearning company
+                            @Apollo, so take your time and think carefully before making your choices.
+                        </p>
+                    </div>
+                    <div id="item-1-4">
+                        <h3>Your Data</h3>
+                        <p>Personal data describes any information about you, including your name, social security
+                            number, driver’s license number, date and place of birth, your mother’s maiden name, and
+                            even pictures or messages that you exchange with family and friends.
+                            <br>
+                            Cybercriminals can use this sensitive information to identify and impersonate you,
+                            infringing on your privacy and potentially causing serious damage to your reputation.
+                        </p>
+                    </div>
+                    <div id="item-1-5">
+                        <h3>Where Is Your Data?</h3>
+                        <p>This has got you thinking. Only yesterday, you shared a couple of photos of your first day on
+                            the job with a few of your close friends. But that should be OK, right? Let’s see…
+                            <br>
+                        <div class="row">
+                            <div class="col-lg-8 m-auto">
+                                <p>You took some photos at work on your mobile phone. Copies of these photos are now
+                                    available on your mobile device.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="img-thumbnail"
+                                    src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/38f2d858dcad8262361cfb0f54c223b784d6e780.png"
+                                    alt="">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="img-thumbnail"
+                                    src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/bd5850570b28e0be8e2c47f553502a4de227fa02.png"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-8 m-auto">
+                                <p>You shared these with five close friends, who live in various locations across the
+                                    world.</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 m-auto">
+                                <p>All of your friends downloaded the photos and now have copies of your photos on their
+                                    devices.</p>
+                            </div>
+                            <div class="col-lg-4">
+                                <img class="img-thumbnail"
+                                    src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/c3122d8c96192756b9e47b5194576e3355c77afd.png"
+                                    alt="">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="img-thumbnail"
+                                    src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/8fefa0df31f4b1a62876eb2f452d51e1e7bff637.png"
+                                    alt="">
+                            </div>
+                            <div class="col-lg-8 m-auto">
+                                <p>One of your friends was so proud that they decided to post and share your photos
+                                    online. The photos are no longer just on your device. They have in fact ended up on
+                                    servers located in different parts of the world and people whom you don’t even know
+                                    now have access to your photos.</p>
+                            </div>
+                        </div>
+
+                        </p>
+                    </div>
+                    <div id="item-1-6">
+                        <h3>What Do Hackers Want?</h3>
+                        <p>So, with all this information about you available online, what do hackers want? Of course,
+                            they want your money.
+                            <br>Can you think of an example that you have experienced yourself or that you have heard or
+                            read about, where cybercriminals have accessed or tried to access financial information
+                            online?
+                            <br>Cybercriminals are certainly very imaginative when it comes to gaining access to your
+                            money. But that’s not all they are after — they could also steal your identity and ruin your
+                            life.
+                            <br>Let’s find out more.
+                        <h5>Share your thoughts</h5>
+                        <input class="form-control" placeholder="Enter your thoughts.." type="message">
+                        <button class="btn btn-outline-success m-3">Submit</button>
+
+                        </p>
+                    </div>
+                    <div id="item-1-7">
+                        <h3>Identity Theft</h3>
+                        <p>Not content with stealing your money for short-term financial gain, cybercriminals are
+                            invested in the long-term gain of identity theft.
+                            <br>You took some photos at work on your mobile phone. Copies of these photos are now
+                            available on your mobile device.
+                            <br>You shared these with five close friends, who live in various locations across the
+                            world.
+                            <br>All of your friends downloaded the photos and now have copies of your photos on their
+                            devices.
+                            <br>One of your friends was so proud that they decided to post and share your photos online.
+                            The photos are no longer just on your device. They have in fact ended up on servers located
+                            in different parts of the world and people whom you don’t even know now have access to your
+                            photos.
+
+                        </p>
+                    </div>
+                    <div id="item-1-8">
+                        <h3>Who Else Wants My Data?</h3>
+                        <p>It’s not just criminals who seek your personal data.
+                            <br>Your ISP tracks your online activity and, in some countries, they can sell this data to
+                            advertisers for a profit.
+                            In certain circumstances, ISPs may be legally required to share your information with
+                            government surveillance agencies or authorities.
+                            <br>Targeted advertising is part of the Internet experience. Advertisers monitor and track
+                            your online activities such as shopping habits and personal preferences and send targeted
+                            ads your way.
+                            <br>Search engines and social media platforms: These platforms gather information about your
+                            gender, geolocation, phone number and political and religious ideologies based on your
+                            search histories and online identity. This information is then sold to advertisers for a
+                            profit.
+                            <br>Websites you visit: Websites use cookies to track your activities in order to provide a
+                            more personalized experience. But this leaves a data trail that is linked to your online
+                            identity that can often end up in the hands of advertisers!
+
+                        </p>
+                    </div>
+                    <div id="item-1-9">
+                        <h3>Where Is Your Data?</h3>
+                        <p>This has got you thinking. Only yesterday, you shared a couple of photos of your first day on
+                            the job with a few of your close friends. But that should be OK, right? Let’s see…
+                            <br>You took some photos at work on your mobile phone. Copies of these photos are now
+                            available on your mobile device.
+                            <br>You shared these with five close friends, who live in various locations across the
+                            world.
+                            <br>All of your friends downloaded the photos and now have copies of your photos on their
+                            devices.
+                            <br>One of your friends was so proud that they decided to post and share your photos online.
+                            The photos are no longer just on your device. They have in fact ended up on servers located
+                            in different parts of the world and people whom you don’t even know now have access to your
+                            photos.
+
+                        </p>
+                    </div>
+
+
+
+                    <!--Item 2 of module 1 starts here-->
+                    <div id="item-2">
+                        <div id="item-2-1">
+                            <h3>Types of Organizational Data</h3>
+                            <div class="row">
+                                <div class="col-lg-8 m-auto">
+                                    <h4>Traditional Data</h4>
+                                    <p>Traditional data is typically generated and maintained by all organizations, big
+                                        and small. It includes the following:</p>
+                                    <ul>
+                                        <li>Transactional data such as details relating to buying and selling,
+                                            production activities and basic organizational operations such as any
+                                            information used to make employment decisions.</li>
+                                        <li>Intellectual property such as patents, trademarks and new product plans,
+                                            which allows an organization to gain economic advantage over its
+                                            competitors. This information is often considered a trade secret and losing
+                                            it could prove disastrous for the future of a company.</li>
+                                        <li>Financial data such as income statements, balance sheets and cash flow
+                                            statements, which provide insight into the health of a company.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/d4f47065ce0c0b163050b4272f5302d8d4b1541d.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/7f3d2a599897a9ae40227c984fdb7b555876fd3c.png"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-8 m-auto">
+                                    <h3>Internet of Things (IoT) and Big Data</h3>
+                                    <p>IoT is a large network of physical objects, such as sensors, software and other
+                                        equipment. All of these ‘things’ are connected to the Internet, with the ability
+                                        to collect and share data. And given that storage options are expanding through
+                                        the cloud and virtualization, it’s no surprise that the emergence of IoT has led
+                                        to an exponential growth in data, creating a new area of interest in technology
+                                        and business called 'Big Data.'</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="item-2-2">
+                            <h3>The cube</h3>
+                            <p>The McCumber Cube is a model framework created by John McCumber in 1991 to help
+                                organizations establish and evaluate information security initiatives by considering all
+                                of the related factors that impact them. This security model has three dimensions:</p>
+                            <ol>
+                                <li>The foundational principles for protecting information systems.</li>
+                                <li>The protection of information in each of its possible states.</li>
+                                <li>The security measures used to protect data.</li>
+                            </ol>
+                            <h5>Scroll down to find out more about the different elements of each dimension.</h5>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/5f05189a7689c477b17e3692777aa7a11b1aa760.svg"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-8 m-auto">
+                                    <ul>
+                                        <li><strong>Confidentiality</strong> is a set of rules that prevents sensitive
+                                            information from being disclosed to unauthorized people, resources and
+                                            processes. Methods to ensure confidentiality include data encryption,
+                                            identity proofing and two factor authentication.</li>
+                                        <li><strong>Integrity</strong> ensures that system information or processes are
+                                            protected from intentional or accidental modification. One way to ensure
+                                            integrity is to use a hash function or checksum.</li>
+                                        <li><strong>Availability</strong> means that authorized users are able to access
+                                            systems and data when and where needed and those that do not meet
+                                            established conditions, are not. This can be achieved by maintaining
+                                            equipment, performing hardware repairs, keeping operating systems and
+                                            software up to date, and creating backups.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/ccf08b773aa9f7e276fc0100c1a09ef575fa5300.svg"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-8 m-auto">
+                                    <ul>
+                                        <li><strong>Processing</strong> refers to data that is being used to perform an
+                                            operation such as updating a database record (data in process).</li>
+                                        <li><strong>Storage</strong> refers to data stored in memory or on a permanent
+                                            storage device such as a hard drive, solid-state drive or USB drive (data at
+                                            rest).</li>
+                                        <li><strong>Transmission</strong> refers to data traveling between information
+                                            systems (data in transit)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/a1dc427e8adbc6fa4bb0e735c6c5aaaf96dd1b4b.svg"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-8 m-auto">
+                                    <ul>
+                                        <li><strong>Awareness, training and education</strong> are the measures put in
+                                            place by an organization to ensure that users are knowledgeable about
+                                            potential security threats and the actions they can take to protect
+                                            information systems.</li>
+                                        <li><strong>Technology</strong> refers to the software- and hardware-based
+                                            solutions designed to protect information systems such as firewalls, which
+                                            continuously monitor your network in search of possible malicious incidents.
+                                        </li>
+                                        <li><strong>Policy and procedure</strong> refers to the administrative controls
+                                            that provide a foundation for how an organization implements information
+                                            assurance, such as incident response plans and best practice guidelines.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item-2-3">
+                            <h3>Your Online Identity
+                            </h3>
+                            <p>It’s your first day on the job, and it’s time to choose a username for your online
+                                identity.
+                                Which of the following options would you choose?
+                                <br>
+                                This is your first chance to gain some valuable defender points at eLearning company
+                                @Apollo, so take your time and think carefully before making your choices.
+                            </p>
+                        </div>
+
+                        <!--Data Security Breaches-->
+                        <div id="item-2-4">
+                            <h3>Data Security Breaches</h3>
+                            <p>These examples show that the potential consequences of a security breach can be severe.
+                                <br>
+                                Select the headings for a summary of these impacts.
+                            </p>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Reputational Damage
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/bff668d78d37c0721ba3f3751f9e767ce69d66b2.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="col-lg-8 m-auto">
+                                                    <p>A security breach can have a negative long-term impact on an
+                                                        organization’s reputation that has taken years to build.
+                                                        Customers, particularly those who have been adversely affected
+                                                        by the breach, will need to be notified and may seek
+                                                        compensation and/or turn to a reliable and secure competitor.
+                                                        Employees may also choose to leave in light of a scandal.
+                                                        Depending on the severity of a breach, it can take a long time
+                                                        to repair an organization’s reputation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Vandalism
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/951907675a19f9534382ee8176f83f9395553e16.png"
+                                                        alt="img not found">
+                                                </div>
+                                                <div class="col-lg-8 m-auto">
+                                                    <p>A hacker or hacking group may vandalize an organization’s website
+                                                        by posting untrue information. They might even just make a few
+                                                        minor edits to your organization’s phone number or address,
+                                                        which can be trickier to detect. In either case, online
+                                                        vandalism can portray unprofessionalism and have a negative
+                                                        impact on your organization’s reputation and credibility.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
+                                            Theft
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/e62316e61f0a82a1b1b39e51a76d155bedcf1507.svg"
+                                                        alt="img not found">
+                                                </div>
+                                                <div class="col-lg-8 m-auto">
+                                                    <p>A data breach often involves an incident where sensitive personal
+                                                        data has been stolen. Cybercriminals can make this information
+                                                        public or exploit it to steal an individual’s money and/or
+                                                        identity.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                            aria-expanded="false" aria-controls="flush-collapseFour">
+                                            Loss of revenue
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/61cd13e841e48a0ef87a473ba19bcdb7a3ee40f0.png"
+                                                        alt="img not found">
+                                                </div>
+                                                <div class="col-lg-8 m-auto">
+                                                    <p>The financial impact of a security breach can be devastating. For
+                                                        example, hackers can take down an organization’s website,
+                                                        preventing it from doing business online. A loss of customer
+                                                        information may impede company growth and expansion. It may
+                                                        demand further investment in an organization’s security
+                                                        infrastructure. And let’s not forget that organizations may face
+                                                        large fines or penalties if they do not protect online data.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                            aria-expanded="false" aria-controls="flush-collapseFive">
+                                            Damaged intellectual property
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/f06e27a39d455e4c1407ccadf0eea734ec9e123e.svg"
+                                                        alt="img not found">
+                                                </div>
+                                                <div class="col-lg-8 m-auto">
+                                                    <p>A security breach could also have a devastating impact on the
+                                                        competitiveness of an organization, particularly if hackers are
+                                                        able to get their hands on confidential documents, trade secrets
+                                                        and intellectual property.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div id="item-3">
+                        <div id="item-3-1">
+                            <h3 class="text">Cyber Attackers</h3>
+                            <div class="row">
+                                <div class="col-lg-8 m-auto">
+                                    <h4>Types of Attackers</h4>
+                                    <p>Let’s look at some of the main types of cyber attackers who’ll try anything to
+                                        get their hands on our information. They are often categorized as white hat,
+                                        gray hat or black hat attackers.</p>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/d4f47065ce0c0b163050b4272f5302d8d4b1541d.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="item-3-2">
+                            <div class="row">
+                                <h3 class="heading m-4">What Color Is My Hat?</h3>
+
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Gray hat</h5>
+                                            <span class="card-text">After hacking into ATM systems remotely using a
+                                                laptop, this attacker worked with the ATM manufacturers to resolve the
+                                                identified security vulnerabilities.</span>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Black hat</h5>
+                                            <span class="card-text">This attacker transferred $10 million into their
+                                                bank account using customer account and PIN credentials gathered from
+                                                recordings.</span>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">White hat</h5>
+                                            <span class="card-text">This attacker’s job is to identify weaknesses in a
+                                                company’s computer system.
+                                                <br>
+                                                While carrying out some research, this attacker stumbled across a
+                                                security vulnerability on an organization's network that they are
+                                                authorized to access.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item-3-3">
+                            <h3>Internal and External Threats</h3>
+                            <p>Cyber attacks can originate from within an organization as well as from outside of it.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-8 m-auto">
+                                    <h6>Internal
+                                        Employees, contract staff or trusted partners can accidentally or intentionally:
+                                    </h6>
+                                    <ul>
+                                        <li>mishandle confidential data</li>
+                                        <li>facilitate outside attacks by connecting infected USB media into the
+                                            organization’s computer system</li>
+                                        <li>invite malware onto the organization’s network by clicking on malicious
+                                            emails or websites</li>
+                                        <li>threaten the operations of internal servers or network infrastructure
+                                            devices.</li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/be99a6f82472f682cbdbd9a71a88ac3fe2eece91.png"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m1/course/en-US/assets/5cb20c8d16ec754cc9d4b4b27f15ecf49fcc4b5a.png"
+                                        alt="">
+                                </div>
+                                <div class="col-lg-8 m-auto">
+                                    <h6>External
+                                        Amateurs or skilled attackers outside of the organization can:
+                                    </h6>
+                                    <ul>
+                                        <li>exploit vulnerabilities in the network</li>
+                                        <li>gain unauthorized access to computing devices</li>
+                                        <li>use social engineering to gain unauthorized access to organizational data.</li>
+                                        
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

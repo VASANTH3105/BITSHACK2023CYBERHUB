@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    #logo {
+        height: 20px;
+        width: 30px;
+    }
+
+    h3 {
+        margin-top: 15px;
+    }
+
+    p {
+        background-color: aliceblue;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .img-cen {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!--nav bar-->
+
+
+
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <img id="logo" class="img-fluid md-mx-3 mx-5" src="imgs\SHlogo.png" alt="">
+        <b class="bold">CyberHub<small></small> </b>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="category.html">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carreirguide.html">Career Guidance</a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#paidcourses">Paid courses</a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.php">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid col-12 mt-lg-4 p-4">
+        <div class="row">
+            <div class="col-lg-3 clo-md-4 order-1 col-12">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne1" aria-expanded="false"
+                                aria-controls="flush-collapseOne1">
+                                Module-2 - Attacks, Concepts and Techniques
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne1" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                                    <nav class="nav nav-pills flex-column">
+                                        <a class="nav-link bg-black text-light" href="#item-1">Analyzing a cyber
+                                            Attack</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-1-1">Types of Malware</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-1-2">Symptoms of Malware</a>
+                                        </nav>
+                                        <a class="nav-link bg-black text-light" href="#item-2">Methods of
+                                            Infiltration</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-2-1">Social Engineering</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-2">Denial-of-Service</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-3">Distributed DoS</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-4">Botnet</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-5">On-Path Attacks</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-6">SEO Poisoning</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-7">Wi-fi Password Cracking</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-8">Password Attacks</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-2-9">Advanced Persistent
+                                                Threats</a>
+                                        </nav>
+                                        <a class="nav-link bg-black text-light" href="#item-3">Security Vulnerability
+                                            and Exploits</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-3-1">Hardware vulnerabilities</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-3-2">Software vulnerabilities</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-3-3">Categorizing Software
+                                                vulnerabilities</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-3-4">Software updates</a>
+                                        </nav>
+                                        <a class="nav-link bg-black text-light" href="#item-3">The Cybersecurity
+                                            Landscape</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-3-1">Cryptocurrency</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-3-2">Cryptojacking</a>
+
+                                        </nav>
+                                    </nav>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9 c-md-8 order-2 col-12">
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                    class="scrollspy-example-2" tabindex="0">
+                    <div id="item-1">
+                        <h2>Attacks, Concepts and Techniques</h2>
+                    </div>
+                    <div id="item-1-1">
+                        <h3>1.1 Types of Malware</h3>
+                        <p>Cybercriminals use many different types of malicious software, or malware, to carry out their
+                            activities. Malware is any code that can be used to steal data, bypass access controls, or
+                            cause harm to or compromise a system. Knowing
+                            what the different types are and how they spread is key to containing and removing them.</p>
+                        <p><strong>Select the headings to find out more about some of the most common malware.</strong>
+                        </p>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Spyware
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/07f0e2f906cd97ff1f0f126958069d3e811f3864.svg"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Designed to track and spy on you, spyware monitors your online
+                                                    activity and can log every key you press on your keyboard, as well
+                                                    as capture almost any of your data, including sensitive personal
+                                                    information
+                                                    such as your online banking details. Spyware does this by modifying
+                                                    the security settings on your devices.<br><br>It often bundles
+                                                    itself with legitimate software or Trojan horses.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Adware
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/796839d33db82c8b5caceaeaa834eaaa467cd8d8.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Adware is often installed with some versions of software and is
+                                                    designed to automatically deliver advertisements to a user, most
+                                                    often on a web browser. You know it when you see it! It’s hard to
+                                                    ignore when
+                                                    you’re faced with constant pop-up ads on your screen.<br><br>It is
+                                                    common for adware to come with spyware.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Backdoor
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/2260c6a3500db1258bb69bd97f66cc6ed015bc4c.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This type of malware is used to gain unauthorized access by bypassing
+                                                    the normal authentication procedures to access a system. As a
+                                                    result, hackers can gain remote access to resources within an
+                                                    application
+                                                    and issue remote system commands.<br><br>A backdoor works in the
+                                                    background and is difficult to detect.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        Ransomware
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/d9d72ca84d1aa301310c9b5dee30f49df8ecc57b.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This malware is designed to hold a computer system or the data it
+                                                    contains captive until a payment is made. Ransomware usually works
+                                                    by encrypting your data so that you can’t access it.<br><br>Some
+                                                    versions
+                                                    of ransomware can take advantage of specific system vulnerabilities
+                                                    to lock it down. Ransomware is often spread through phishing emails
+                                                    that encourage you to download a malicious attachment or through
+                                                    a software vulnerability.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        Scareware
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/27b665a3a9fba610d7746eec3e549d3bf527de42.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This is a type of malware that uses 'scare’ tactics to trick you into
+                                                    taking a specific action. Scareware mainly consists of operating
+                                                    system style windows that pop up to warn you that your system is at
+                                                    risk and needs to run a specific program for it to return to normal
+                                                    operation.<br><br>If you agree to execute the specific program, your
+                                                    system will become infected with malware.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse6" aria-expanded="false"
+                                        aria-controls="flush-collapse6">
+                                        Rootkit
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse6" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/49b1a0f9e5981635cc29157b36bb4c5419e77f30.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This malware is designed to modify the operating system to create a
+                                                    backdoor, which attackers can then use to access your computer
+                                                    remotely. Most rootkits take advantage of software vulnerabilities
+                                                    to gain
+                                                    access to resources that normally shouldn’t be accessible (privilege
+                                                    escalation) and modify system files.<br><br>Rootkits can also modify
+                                                    system forensics and monitoring tools, making them very hard
+                                                    to detect. In most cases, a computer infected by a rootkit has to be
+                                                    wiped and any required software reinstalled.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse7" aria-expanded="false"
+                                        aria-controls="flush-collapse7">
+                                        Virus
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse7" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/7372d708db4ded3595663fbbbbd56e6f83fa074b.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>A virus is a type of computer program that, when executed, replicates
+                                                    and attaches itself to other executable files, such as a document,
+                                                    by inserting its own code. Most viruses require end-user interaction
+                                                    to initiate activation and can be written to act on a specific date
+                                                    or time.<br><br>Viruses can be relatively harmless, such as those
+                                                    that display a funny image. Or they can be destructive, such as
+                                                    those
+                                                    that modify or delete data.<br><br>Viruses can also be programmed to
+                                                    mutate in order to avoid detection. Most viruses are spread by USB
+                                                    drives, optical disks, network shares or email.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse8" aria-expanded="false"
+                                        aria-controls="flush-collapse8">
+                                        Trojan horse
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse8" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/2c1538982204721ca4a9c2c81b3721c67e45d6ce.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This malware carries out malicious operations by masking its true
+                                                    intent. It might appear legitimate but is, in fact, very dangerous.
+                                                    Trojans exploit your user privileges and are most often found in
+                                                    image
+                                                    files, audio files or games.<br><br>Unlike viruses, Trojans do not
+                                                    self-replicate but act as a decoy to sneak malicious software past
+                                                    unsuspecting users.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapse9" aria-expanded="false"
+                                        aria-controls="flush-collapse9">
+                                        Worms
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse9" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/2638f1543894b6dedee2269ebba7d7616006e7b7.svg"
+                                                    alt="img not found">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This is a type of malware that replicates itself in order to spread
+                                                    from one computer to another. Unlike a virus, which requires a host
+                                                    program to run, worms can run by themselves. Other than the initial
+                                                    infection of the host, they do not require user participation and
+                                                    can spread very quickly over the network.<br><br>Worms share similar
+                                                    patterns: They exploit system vulnerabilities, they have a way to
+                                                    propagate themselves, and they all contain malicious code (payload)
+                                                    to cause damage to computer systems or networks.<br><br>Worms are
+                                                    responsible for some of the most devastating attacks on the
+                                                    Internet.
+                                                    In 2001, the Code Red worm had infected over 300,000 servers in just
+                                                    19 hours.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div id="item-1-2">
+                        <h3>1.2 Symptoms of Malware</h3>
+                        <p>So now you know about the different kinds of malware. But what do you think their symptoms
+                            might be?<br><br><strong>Take a pause and see what you can come up with, and when you’re
+                                ready, select the image to reveal some possible answers.</strong></p>
+                        <div class="text-center"><img class="img-thumbnail"
+                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/c86138686cdee370ba4294c2f078b99ff3bf588b.png"
+                                alt="img not found"><br><br><br><br><br>
+                            <div class="text-center">
+                                <img src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/f9c1711e8f1754a07219300314f0eb4a29e014ed.png"
+                                    alt="img not found" width="200px" height="200px">
+                            </div>
+                            <p>This is exactly what could be happening at @Apollo!<br><br>Based on what you now know, do
+                                you think you could spot the different types of malware from their
+                                descriptions?<br><br>Let’s see!</p>
+                        </div>
+                    </div>
+
+                    <div id="item-2-1">
+                        <h3>2.1 Social Engineering</h3>
+                        <p>Social engineering is the manipulation of people into performing actions or divulging
+                            confidential information. Social engineers often rely on people’s willingness to be helpful,
+                            but they also prey on their weaknesses. For example,
+                            an attacker will call an authorized employee with an urgent problem that requires immediate
+                            network access and appeal to the employee’s vanity or greed or invoke authority by using
+                            name-dropping techniques in order to gain
+                            this access.<br><br><strong>Select the arrows to find out more about some common types of
+                                social engineering attacks.</strong></p>
+
+                        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner text-center">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/22474f7ed64c2da6407565cc2baeb9390dc73653.png"
+                                        class="d-block w-100" alt="...">
+
+                                    <h5>Pretexting</h5>
+                                    <p>This is when an attacker calls an individual and lies to them in an attempt to
+                                        gain access to privileged data.<br><br>For example, pretending to need a
+                                        person’s personal or financial data in order to confirm their identity.<br><br>
+                                    </p>
+
+                                </div>
+                                <div class="carousel-item" data-bs-interval="2000">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/ea4815736bfdaaea3febc4badd93154240f6f5c7.png"
+                                        class="d-block w-100" alt="...">
+                                    <h5>Tailgating</h5>
+                                    <p>This is when an attacker quickly follows an authorized person into a secure,
+                                        physical location.<br><br></p>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-thumbnail"
+                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/5147efc6bff1d2a8c7cb0344003dd2d496e95fa2.svg"
+                                        class="d-block w-100" alt="...">
+
+                                    <h5>Something for something (quid pro quo)</h5>
+                                    <p>This is when an attacker requests personal information from a person in exchange
+                                        for something, like a free gift.<br><br></p>
+
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <br><br><br><br><br>
+                        <div class="text-center"> <img
+                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/f9c1711e8f1754a07219300314f0eb4a29e014ed.png"
+                                alt="img not found" width="200px" height="200px">
+                        </div>
+                        <p>DoS attacks are considered a major risk because they can easily interrupt communication and
+                            cause significant loss of time and money.</p>
+                    </div>
+                </div>
+                <div id="item-2-2">
+                    <h3>2.2 Denial-of-Service</h3>
+                    <p>Denial-of-Service (DoS) attacks are a type of network attack that is relatively simple to carry
+                        out, even by an unskilled attacker. A DoS attack results in some sort of interruption of network
+                        service to users, devices or applications.<br><br><strong>Select the images to find out more
+                            about the two main types of DoS attacks.</strong>
+                    </p>
+
+                </div>
+                <div id="item-2-3">
+                    <h3>2.3 Distributed DoS</h3>
+                    <p>A Distributed DoS (DDoS) attack is similar to a DoS attack but originates from multiple,
+                        coordinated sources. For example:</p>
+                    <ul>
+                        <li>An attacker builds a network (botnet) of infected hosts called zombies, which are controlled
+                            by handler systems.</li>
+                        <li>The zombie computers will constantly scan and infect more hosts, creating more and more
+                            zombies.</li>
+                        <li>When ready, the hacker will instruct the handler systems to make the botnet of zombies carry
+                            out a DDoS attack.</li>
+                    </ul>
+                </div>
+                <div id="item-2-4">
+                    <h3>2.4 Botnet</h3>
+                    <p>A bot computer is typically infected by visiting an unsafe website or opening an infected email
+                        attachment or infected media file. A botnet is a group of bots, connected through the Internet,
+                        that can be controlled by a malicious individual
+                        or group. It can have tens of thousands, or even hundreds of thousands, of bots that are
+                        typically controlled through a command and control server.<br><br>These bots can be activated to
+                        distribute malware, launch DDoS attacks,
+                        distribute spam email, or execute brute-force password attacks. Cybercriminals will often rent
+                        out botnets to third parties for nefarious purposes.<br><br>Many organizations. like Cisco,
+                        force network activities through botnet
+                        traffic filters to identify any botnet locations.</p>
+                </div>
+                <div id="item-2-5">
+                    <h3>2.5 On-Path Attacks</h3>
+                    <p>On-path attackers intercept or modify communications between two devices, such as a web browser
+                        and a web server, either to collect information from or to impersonate one of the
+                        devices.<br><br>This type of attack is also referred
+                        to as a <strong>man-in-the-middle</strong> or <strong>man-in-the-mobile</strong> attack.</p>
+                    <br><br><br><br><br>
+                    <div class="text-center">
+                        <img src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/f9c1711e8f1754a07219300314f0eb4a29e014ed.png"
+                            alt="img not found" width="200px" height="200px">
+                    </div>
+                    <p>There are a lot of ways for cybercriminals to infiltrate your systems and networks, but it’s
+                        important that you know what these are.<br><br><strong>Let’s keep going!</strong></p>
+
+                </div>
+                <div id="item-2-6">
+                    <h3>2.6 SEO Poisoning</h3>
+                    <p>You’ve probably heard of search engine optimization or SEO which, in simple terms, is about
+                        improving an organization’s website so that it gains greater visibility in search engine
+                        results.<br><br>So what do you think SEO poisoning
+                        might be? Take a moment to consider this and when you’re ready, select the image to find out if
+                        you were right!</p>
+                </div>
+                <div id="item-2-7">
+                    <h3>2.7 Wi-Fi Password Cracking</h3>
+                    <p>You’re enjoying your lunch in the canteen when a colleague approaches you. They seem
+                        distressed.<br><br>They explain that they can’t seem to connect to the public Wi-Fi on their
+                        phone and ask if you have the private Wi-Fi password
+                        to hand so that they can check that their phone is working.</p>
+                </div>
+                <div id="item-2-8">
+                    <h3>2.8 Password Attacks</h3>
+                    <p>Entering a username and password is one of the most popular forms of authenticating to a web
+                        site. Therefore, uncovering your password is an easy way for cybercriminals to gain access to
+                        your most valuable information.<br><br><strong>Select the headings to find out more about some
+                            of the common password security attacks.</strong></p>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Password spraying
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/cad4c73462916cb67e69c2eb50fd9dcdca59cfbe.png"
+                                                alt="">
+                                        </div>
+                                        <div class="col-lg-8 m-auto">
+                                            <p>This technique attempts to gain access to a system by ‘spraying’ a few
+                                                commonly used passwords across a large number of accounts. For example,
+                                                a cybercriminal uses 'Password123' with many usernames before trying
+                                                again with a second commonly-used password, such as
+                                                ‘qwerty.’<br><br>This technique allows the perpetrator to remain
+                                                undetected as they avoid frequent account lockouts.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Dictionary attacks
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/cd79e882e9efe6d568118ae43f447a500c9955d6.png"
+                                                alt="img not found">
+                                        </div>
+                                        <div class="col-lg-8 m-auto">
+                                            <p>A hacker systematically tries every word in a dictionary or a list of
+                                                commonly used words as a password in an attempt to break into a
+                                                password-protected account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Brute-force attacks
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/d62ba4eb77ce4f60c69a8c5c2c843de3fa7ac769.png"
+                                                alt="img not found">
+                                        </div>
+                                        <div class="col-lg-8 m-auto">
+                                            <p>The simplest and most commonly used way of gaining access to a
+                                                password-protected site, brute-force attacks see an attacker using all
+                                                possible combinations of letters, numbers and symbols in the password
+                                                space
+                                                until they get it right.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    Rainbow attacks
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/34a110cd33e1aeac5108f201e497706b546fccb9.png"
+                                                alt="img not found">
+                                        </div>
+                                        <div class="col-lg-8 m-auto">
+                                            <p>Passwords in a computer system are not stored as plain text, but as
+                                                hashed values (numerical values that uniquely identify data). A rainbow
+                                                table is a large dictionary of precomputed hashes and the passwords
+                                                from which they were calculated.<br><br>Unlike a brute-force attack that
+                                                has to calculate each hash, a rainbow attack compares the hash of a
+                                                password with those stored in the rainbow table. When an attacker
+                                                finds a match, they identify the password used to create the hash.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    Traffic interception
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/11ccc1f6f9152fb001ad44a4b7e1ea3586c15d68.png"
+                                                alt="img not found">
+                                        </div>
+                                        <div class="col-lg-8 m-auto">
+                                            <p>Plain text or unencrypted passwords can be easily read by other humans
+                                                and machines by intercepting communications.<br><br>If you store a
+                                                password in clear, readable text, anyone who has access to your account
+                                                or device, whether authorized or unauthorized, can read it.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="item-2-9">
+                    <h3>2.9 Advanced Persistent Threats</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <p>Attackers also achieve infiltration through advanced persistent threats (APTs) — a
+                                multi-phase, long term, stealthy and advanced operation against a specific target. For
+                                these reasons, an individual attacker often lacks the
+                                skill set, resources or persistence to perform APTs.<br><br>Due to the complexity and
+                                the skill level required to carry out such an attack, an APT is usually well-funded and
+                                typically targets organizations or nations for
+                                business or political reasons.<br><br>Its main purpose is to deploy customized malware
+                                on one or more of the target’s systems and remain there undetected.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <img class="img-thumbnail"
+                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/a1a2dd4e8ba07b8f319eceac76057ee0ab73561f.png"
+                                alt="img not found">
+                        </div>
+                    </div>
+
+                </div>
+                <div id="item-3-1">
+                    <h3>3.1 Hardware Vulnerabilities</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <p>Hardware vulnerabilities are most often the result of hardware design flaws. For example,
+                                the type of memory called RAM basically consists of lots of capacitors (a component
+                                which can hold an electrical charge) installed very
+                                close to one another. However, it was soon discovered that, due to their close
+                                proximity, changes applied to one of these capacitors could influence neighbor
+                                capacitors. Based on this design flaw, an exploit called Rowhammer
+                                was created. By repeatedly accessing (hammering) a row of memory, the Rowhammer exploit
+                                triggers electrical interferences that eventually corrupt the data stored inside the
+                                RAM.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <img class="img-thumbnail"
+                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/03a3deee3637fdb5db39c67697f1f90f744482e4.png"
+                                alt="img not found">
+                        </div>
+                        <br><br><br><br>
+                        <h5>Meltdown and Spectre</h5>
+                        <p>Google security researchers discovered Meltdown and Spectre, two hardware vulnerabilities
+                            that affect almost all central processing units (CPUs) released since 1995 within desktops,
+                            laptops, servers, smartphones, smart devices
+                            and cloud services.<br><br>Attackers exploiting these vulnerabilities can read all memory
+                            from a given system (Meltdown), as well as data handled by other applications (Spectre). The
+                            Meltdown and Spectre vulnerability exploitations
+                            are referred to as side-channel attacks (information is gained from the implementation of a
+                            computer system). They have the ability to compromise large amounts of memory data because
+                            the attacks can be run multiple times on
+                            a system with very little possibility of a crash or other error.<br><br><br><br>Hardware
+                            vulnerabilities are specific to device models and are not generally exploited through random
+                            compromising attempts. While hardware exploits
+                            are more common in highly targeted attacks, traditional malware protection and good physical
+                            security are sufficient protection for the everyday user.</p>
+                    </div>
+                    <div id="item-3-2">
+                        <h3>3.2 Software Vulnerabilities</h3>
+                        <p>Software vulnerabilities are usually introduced by errors in the operating system or
+                            application code.<br><br><strong>Select the logo to find out more about the SYNful Knock
+                                vulnerability discovered in Cisco Internetwork Operating System (IOS) in 2015.</strong>
+                        </p>
+                    </div>
+                    <div id="item-3-3">
+                        <h3>3.3 Categorizing Software Vulnerabilities</h3>
+                        <p>Most software security vulnerabilities fall into several main
+                            categories.<br><br><strong>Select the headings to find out what these are.</strong><br><br>
+                        </p>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Buffer overflow
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <img class="img-thumbnail"
+                                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/e3a11f600245ed0107323cc592db6b78a32fd24b.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Buffers are memory areas allocated to an application. A vulnerability
+                                                    occurs when data is written beyond the limits of a buffer. By
+                                                    changing data beyond the boundaries of a buffer, the application can
+                                                    access
+                                                    memory allocated to other processes. This can lead to a system crash
+                                                    or data compromise, or provide escalation of privileges.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Non-validated input
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="text-center">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/f73c8e938c60bc30ef44706253c7ce4e22d6bb63.png"
+                                                        alt="img not found">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Programs often require data input, but this incoming data could have
+                                                    malicious content, designed to force the program to behave in an
+                                                    unintended way.<br><br>For example, consider a program that receives
+                                                    an image for processing. A malicious user could craft an image file
+                                                    with invalid image dimensions. The maliciously crafted dimensions
+                                                    could force the program to allocate buffers of incorrect and
+                                                    unexpected
+                                                    sizes.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Race conditions
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="text-center">
+                                                    <img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/f09be8c7887ba369fe1e2c8d630a5048b1943e7a.png"
+                                                        alt="img not found">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>This vulnerability describes a situation where the output of an event
+                                                    depends on ordered or timed outputs. A race condition becomes a
+                                                    source of vulnerability when the required ordered or timed events do
+                                                    not occur in the correct order or at the proper time.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        Weaknesses in security practices
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="text-center"><img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/c3d396dc995e72bf0cbea4b36f0208f3ea344292.png"
+                                                        alt="img not found">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Systems and sensitive data can be protected through techniques such
+                                                    as authentication, authorization and encryption. Developers should
+                                                    stick to using security techniques and libraries that have already
+                                                    been
+                                                    created, tested and verified and should not attempt to create their
+                                                    own security algorithms. These will only likely introduce new
+                                                    vulnerabilities.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        Access control problems
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="text-center"><img class="img-thumbnail"
+                                                        src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/93a2ad5fecc5430041b8d9c7184f4a6c89708e80.png"
+                                                        alt="img not found">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 m-auto">
+                                                <p>Access control is the process of controlling who does what and ranges
+                                                    from managing physical access to equipment to dictating who has
+                                                    access to a resource, such as a file, and what they can do with it,
+                                                    such
+                                                    as read or change the file. Many security vulnerabilities are
+                                                    created by the improper use of access controls.<br><br>Nearly all
+                                                    access controls and security practices can be overcome if an
+                                                    attacker has
+                                                    physical access to target equipment. For example, no matter the
+                                                    permission settings on a file, a hacker can bypass the operating
+                                                    system and read the data directly off the disk. Therefore, to
+                                                    protect
+                                                    the machine and the data it contains, physical access must be
+                                                    restricted, and encryption techniques must be used to protect data
+                                                    from being stolen or corrupted.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="item-3-4">
+                            <h3>3.4 Software Updates</h3>
+                            <p>The goal of software updates is to stay current and avoid exploitation of
+                                vulnerabilities. Microsoft, Apple and other operating system producers release patches
+                                and updates almost every day and applications such as web browsers,
+                                mobile apps and web servers are often updated by the companies or organizations
+                                responsible for them.<br><br>Despite the fact that organizations put a lot of effort
+                                into finding and patching software vulnerabilities, new
+                                vulnerabilities are discovered regularly. That’s why some organizations use third party
+                                security researchers who specialize in finding vulnerabilities in software, or actually
+                                invest in their own penetration testing teams
+                                dedicated to search, find and patch software vulnerabilities before they can get
+                                exploited.<br><br>Google’s Project Zero is a great example of this practice. After
+                                discovering a number of vulnerabilities in various software
+                                used by end users, Google formed a permanent team dedicated to finding software
+                                vulnerabilities.<br><br></p>
+                        </div>
+                        <div id="item-4-1">
+                            <h3>4.1 Cryptocurrency</h3>
+                            <p>Cryptocurrency is digital money that can be used to buy goods and services, using strong
+                                encryption techniques to secure these online transactions. Banks, governments and even
+                                companies like Microsoft and AT&T are very aware
+                                of its importance and are jumping on the cryptocurrency bandwagon!<br><br><strong>Click
+                                    or tap the forward arrow to find out more about how cryptocurrency transactions
+                                    work.</strong></p>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <p>Cryptocurrency owners keep their money in encrypted, virtual ‘wallets.’ When
+                                            a transaction takes place between the owners of two digital wallets, the
+                                            details are recorded in a decentralized, electronic ledger or
+                                            blockchain system. This means it is carried out with a degree of anonymity
+                                            and is self-managed, with no interference from third parties such as central
+                                            banks or government entities.</p>
+                                        <div class="text-center"><img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/576e3ffa0ddefd578d2318fe5a32061a2d4f6773.svg"
+                                                class="d-block w-100" alt="..." width="300px" height="400px">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p>Approximately every ten minutes, special computers collect data about the
+                                            latest cryptocurrency transactions, turning them into mathematical puzzles
+                                            to maintain confidentiality.<br><br>These transactions are then
+                                            verified through a technical and highly complex process known as ‘mining.’
+                                            This step typically involves an army of ‘miners’ working on high-end PCs to
+                                            solve mathematical puzzles and authenticate transactions.</p>
+                                        <div class="text-center"><img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/00e31a2179d5f7f3be3450485219ec9a180708f2.png"
+                                                class="d-block w-100" alt="..." width="300px" height="400px">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <p>Once verified, the ledger is updated and electronically copied and
+                                            disseminated worldwide to anyone belonging to the blockchain network,
+                                            effectively completing a transaction.</p>
+                                        <div class="text-center"><img class="img-thumbnail"
+                                                src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/20e32b710f6e8431189276af26ac8bb0b9b65b0f.svg"
+                                                class="d-block w-100" alt="..." width="300px" height="400px">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-target="#carouselExampleIndicators" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-target="#carouselExampleIndicators" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div id="item-4-2">
+                            <h3>4.2 Cryptojacking</h3>
+                            <p>Cryptojacking is an emerging threat that hides on a user’s computer, mobile phone,
+                                tablet, laptop or server, using that machine’s resources to 'mine’ cryptocurrencies
+                                without the user's consent or knowledge.
+
+                                <br><br>Many victims of cryptojacking didn’t even know they’d been hacked until it was
+                                too late!
+                            </p>
+                            <div class="text-center">
+                                <img class="img-thumbnail"
+                                    src="https://skillsforall.com/content/i2cs/7.1/m2/course/en-US/assets/d576e9dc480426e986d51a0c373abb82972e61e7.gif"
+                                    class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

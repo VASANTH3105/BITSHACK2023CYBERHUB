@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content 1</title>
+  <link rel="stylesheet" href="./carrierguide/carrier.css">
+
+   
+</head>
+<body>
+    <div class="content1-container">
+
+        <h1>Intermediate level timeline cards</h1>
+        <ul>
+            <li style="--accent-color:#41516C">
+                <div class="date">Stage: 6</div>
+                <div class="title">Advanced Networking</div>
+                <div class="descr">Dive deeper into networking protocols, routing, and security measures. Learn about network segmentation and advanced firewall configurations.</div>
+            </li>
+            <li style="--accent-color:#FBCA3E">
+                <div class="date">Stage: 7</div>
+                <div class="title">Threat Analysis and Incident Response</div>
+                <div class="descr">LFocus on analyzing advanced threats and developing incident response plans. Explore malware analysis, digital forensics, and threat intelligence.</div>
+            </li>
+            <li style="--accent-color:#E24A68">
+                <div class="date">Stage: 8</div>
+                <div class="title">Secure Application Development</div>
+                <div class="descr">Learn secure coding practices, application security testing, and how to identify and mitigate common vulnerabilities in web and mobile applications.</div>
+            </li>
+            <li style="--accent-color:#1B5F8C">
+                <div class="date">Stage: 9</div>
+                <div class="title">Advanced Cryptography</div>
+                <div class="descr">Explore advanced cryptographic algorithms, encryption techniques, and cryptographic protocols used in modern cybersecurity.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+                <div class="date">Stage: 10</div>
+                <div class="title">Cloud and IoT Security</div>
+                <div class="descr">Understand the unique security challenges posed by cloud computing and the Internet of Things (IoT). Learn about securing cloud infrastructure and IoT devices.</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const targetEl = document.querySelector('.target');
+
+        const loadSnippet = number => {
+            console.log('Fetching content for timeline' + number);
+            fetch(`http://127.0.0.1:5500/timeline/timelinepages/timeline${number}.html`)
+                .then(res => {
+                    if (res.ok) {
+                        return res.text();
+                    } else {
+                        console.log('Fetch failed:', res.status, res.statusText);
+                    }
+                })
+                .then(htmlSnippet => {
+                    console.log('Fetched HTML snippet:', htmlSnippet);
+                    targetEl.innerHTML = htmlSnippet;
+                })
+                .catch(error => {
+                    console.error('Error fetching content:', error);
+                });
+        };
+
+    </script>
+</body>
+</html>

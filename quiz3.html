@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+</head>
+<link rel="stylesheet" href="./cascades/quiz3.css">
+
+<body>
+    <div class="quiz-container">
+        <h1>Online Quiz</h1>
+        <div id="question-container" class="question-container">
+            <p class="ques"><span id="qnum"></span><span id="question"> text goes here.</span></p>
+            <div id="answer-buttons" class="btn-container">
+                <!-- Answer buttons will be added dynamically using JavaScript -->
+                -
+            </div>
+        </div>
+        <div id="score-container" class="score-container">
+            <p>Your Score: <span id="score">0</span></p>
+            <div id="next-btn"></div>
+        </div>
+    </div>
+    <script>
+        const questionContainer = document.getElementById('question-container');
+        const quesnum = document.getElementById('qnum');
+        const questionElement = document.getElementById('question');
+        const answerButtons = document.getElementById('answer-buttons');
+        const scoreElement = document.getElementById('score');
+        const scorecontainer = document.getElementById('score-container');
+        const nextbutton = document.getElementById('next-btn');
+        
+        const questions = [{
+                question: ') Why is network security essential?',
+                answers: [{
+                    text: 'To protect user privacy',
+                    correct: 1
+                }, {
+                    text: 'To enhance network speed',
+                    correct: 2
+                }, {
+                    text: 'To increase data transfer rates',
+                    correct: 3
+                }, {
+                    text: 'To promote data sharing',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is a vulnerability in network security?',
+                answers: [{
+                    text: 'A weakness that can be exploited',
+                    correct: 1
+                }, {
+                    text: 'A network protocol',
+                    correct: 2
+                }, {
+                    text: 'A strength in a system design',
+                    correct: 3
+                }, {
+                    text: 'A type of encryption',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the definition of risk in network security?',
+                answers: [{
+                    text: 'The probability of an event happening',
+                    correct: 1
+                }, {
+                    text: 'The likelihood of a vulnerability',
+                    correct: 2
+                }, {
+                    text: 'The value of assets',
+                    correct: 3
+                }, {
+                    text: 'The strength of encryption',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which type of hacker commits crimes for personal gain or malicious reasons?',
+                answers: [{
+                    text: 'Black hat hacker',
+                    correct: 1
+                }, {
+                    text: 'Gray hat hacker',
+                    correct: 2
+                }, {
+                    text: 'White hat hacker',
+                    correct: 3
+                }, {
+                    text: 'Ethical hacker',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is a common objective of DNS tunneling attacks?',
+                answers: [{
+                    text: 'To hide malicious code',
+                    correct: 1
+                }, {
+                    text: 'To improve network performance',
+                    correct: 2
+                }, {
+                    text: 'To enhance data encryption',
+                    correct: 3
+                }, {
+                    text: 'To prevent DDoS attacks',
+                    correct: 4 
+                }]
+            },{
+                question: ') What does the term "ARP" stand for in network security?',
+                answers: [{
+                    text: 'Address Resolution Protocol',
+                    correct: 1
+                }, {
+                    text: 'Advanced Routing Protocol',
+                    correct: 2
+                }, {
+                    text: 'Authentication and Routing Protocol',
+                    correct: 3
+                }, {
+                    text: 'Automated Resource Protocol',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the purpose of an HMAC in network security?',
+                answers: [{
+                    text: 'To add origin authentication',
+                    correct: 1
+                }, {
+                    text: 'To provide data confidentiality',
+                    correct: 2
+                }, {
+                    text: 'To ensure data integrity',
+                    correct: 3
+                }, {
+                    text: 'To prevent DNS attacks',
+                    correct: 4 
+                }]
+            },{
+                question: ') What type of attack occurs when a rogue DHCP server provides false IP configuration parameters to legitimate clients?',
+                answers: [{
+                    text: 'DHCP spoofing',
+                    correct: 1
+                }, {
+                    text: 'ARP spoofing',
+                    correct: 2
+                }, {
+                    text: 'DNS tunneling',
+                    correct: 3
+                }, {
+                    text: 'TCP SYN flood',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the primary goal of DNS open resolver attacks?',
+                answers: [{
+                    text: 'To create a MITM attack',
+                    correct: 1
+                }, {
+                    text: 'To enhance DNS performance',
+                    correct: 2
+                }, {
+                    text: 'To improve network security',
+                    correct: 3
+                }, {
+                    text: 'To protect against DDoS attacks',
+                    correct: 4 
+                }]
+            },{
+                question: ') What does the term "DHCP" stand for in network security?',
+                answers: [{
+                    text: 'Dynamic Host Configuration Protocol',
+                    correct: 1
+                }, {
+                    text: 'Data Handling and Control Protocol',
+                    correct: 2
+                }, {
+                    text: 'Domain Host Control Protocol ',
+                    correct: 3
+                }, {
+                    text: 'Digital Host Communication Protocol',
+                    correct: 4 
+                }]
+            },{
+
+
+
+
+                question: ') Which type of attack involves sending a flood of UDP packets to consume network resources?',
+                answers: [{
+                    text: 'TCP SYN flood attack',
+                    correct: 4
+                }, {
+                    text: 'UDP flood attack',
+                    correct: 1
+                }, {
+                    text: 'DNS spoofing attack',
+                    correct: 2
+                }, {
+                    text: 'ARP poisoning attack',
+                    correct: 3 
+                }]
+            },{
+                question: ') What is the main function of an open resolver in DNS?',
+                answers: [{
+                    text: 'To protect against DDoS attacks',
+                    correct: 4
+                }, {
+                    text: 'To provide DNS resolution to clients outside its domain',
+                    correct: 1
+                }, {
+                    text: 'To serve as a DNS client',
+                    correct: 2
+                }, {
+                    text: 'To cache DNS records',
+                    correct: 3 
+                }]
+            },{
+                question: ') Which encryption algorithm uses a public-private key pair for data confidentiality?',
+                answers: [{
+                    text: 'AES',
+                    correct: 4
+                }, {
+                    text: 'RSA',
+                    correct: 1
+                }, {
+                    text: ' HMAC',
+                    correct: 2
+                }, {
+                    text: 'SHA-256',
+                    correct: 3 
+                }]
+            },{
+                question: ') Which hashing algorithm is often used for data integrity but is considered insecure?',
+                answers: [{
+                    text: 'SHA-2',
+                    correct: 4
+                }, {
+                    text: 'SHA-1',
+                    correct: 1
+                }, {
+                    text: 'SHA-3',
+                    correct: 2
+                }, {
+                    text: 'MD5',
+                    correct: 3 
+                }]
+            },{
+                question: ') How does an HMAC enhance data security in network communication?',
+                answers: [{
+                    text: 'By encrypting data packets',
+                    correct: 4
+                }, {
+                    text: 'By adding data integrity and origin authentication',
+                    correct: 1
+                }, {
+                    text: 'By creating subdomains',
+                    correct: 2
+                }, {
+                    text: 'By serving as a DNS resolver',
+                    correct: 3 
+                }]
+            },{
+                question: ') Which type of encryption relies on a shared secret key for both encryption and decryption? ',
+                answers: [{
+                    text: 'Asymmetric encryption',
+                    correct: 4
+                }, {
+                    text: 'Symmetric encryption',
+                    correct: 1
+                }, {
+                    text: 'Public key encryption',
+                    correct: 2
+                }, {
+                    text: 'Private key encryption',
+                    correct: 3 
+                }]
+            },{
+                question: ')What is the primary purpose of a firewall in network security?',
+                answers: [{
+                    text: ' Protecting physical access points',
+                    correct: 2
+                }, {
+                    text: 'Monitoring user activity',
+                    correct: 4
+                }, {
+                    text: ' Blocking unauthorized network traffic',
+                    correct: 1
+                }, {
+                    text: 'Encrypting data transmission',
+                    correct: 3 //For correct answer 1, others 2,3,4.
+                }]
+            }, {
+                question: ')What type of malware is designed to spread rapidly and infect a large number of computers in a short time?',
+                answers: [{
+                    text: 'Worm',
+                    correct: 1
+                }, {
+                    text: 'Adware',
+                    correct: 3
+                }, {
+                    text: 'WSpyware',
+                    correct: 2
+                }, {
+                    text: 'Trojan',
+                    correct: 4
+                }]
+            }, {
+                question: ')Which cryptographic technique is used to verify the authenticity of a message or data?',
+                answers: [{
+                    text: ' Encryption',
+                    correct: 2
+                }, {
+                    text: 'Hashing',
+                    correct: 1
+                }, {
+                    text: 'Steganography',
+                    correct: 4
+                }, {
+                    text: 'Decryption',
+                    correct: 3
+                }]
+            }, {
+                question: ')What is the primary goal of a Distributed Denial of Service (DDoS) attack?',
+                answers: [{
+                    text: 'Overloading a target"s network or website',
+                    correct: 1
+                }, {
+                    text: 'Stealing sensitive data',
+                    correct: 2
+                }, {
+                    text: 'Gaining unauthorized access',
+                    correct: 3
+                }, {
+                    text: 'Spreading malware',
+                    correct: 4
+                }]
+            }, {
+                question: ')Which security measure involves confirming the identity of a user or system before granting access?',
+                answers: [{
+                    text: 'Firewall',
+                    correct: 2
+                }, {
+                    text: 'Authentication',
+                    correct: 1
+                }, {
+                    text: 'Encryption',
+                    correct: 3
+                }, {
+                    text: 'Intrusion detection',
+                    correct: 4
+                }]
+            }, {
+                question: ') What is the term for a software vulnerability that is unknown to the software vendor and has no official patch?',
+                answers: [{
+                    text: 'SQL injection',
+                    correct: 2
+                }, {
+                    text: 'Buffer overflow',
+                    correct: 4
+                }, {
+                    text: 'Backdoor',
+                    correct: 3
+                }, {
+                    text: 'Zero-day exploit',
+                    correct: 1
+                }]
+            }, {
+                question: ')Which of the following is NOT a common password security best practice?',
+                answers: [{
+                    text: 'Using complex and unique passwords for each account',
+                    correct: 2
+                }, {
+                    text: 'Changing passwords regularly',
+                    correct: 3
+                }, {
+                    text: 'Sharing passwords with trusted colleagues',
+                    correct: 1
+                }, {
+                    text: 'Enabling multi-factor authentication',
+                    correct: 4
+                }]
+            }, {
+                question: ')What is the primary purpose of a Virtual Private Network (VPN)',
+                answers: [{
+                    text: 'Encrypting email messages',
+                    correct: 2
+                }, {
+                    text: 'Scanning for malware',
+                    correct: 4
+                }, {
+                    text: 'Processing',
+                    correct: 3
+                }, {
+                    text: 'Securing network traffic over the internet',
+                    correct: 1
+                }]
+            }, {
+                question: ')What does the acronym "IoT" stand for in the context of cybersecurity?',
+                answers: [{
+                    text: 'Internet of Things',
+                    correct: 1
+                }, {
+                    text: 'Identity of Targets',
+                    correct: 2
+                }, {
+                    text: 'International Online Transactions',
+                    correct: 3
+                }, {
+                    text: 'Information on Threats',
+                    correct: 4
+                }]
+            }, {
+                question: ') Which of the following is a social engineering technique that involves manipulating individuals into divulging confidential information?',
+                answers: [{
+                    text: 'Integrity',
+                    correct: 2
+                }, {
+                    text: 'Confidentiality',
+                    correct: 3
+                }, {
+                    text: 'Phishing',
+                    correct: 1
+                }, {
+                    text: 'Availability ',
+                    correct: 4
+                }]
+            }, {
+                question: ') What is the term for the process of concealing information within other non-secret data to hide its existence?',
+                answers: [{
+                    text: 'Decryption',
+                    correct: 2
+                }, {
+                    text: 'Steganography',
+                    correct: 1
+                }, {
+                    text: 'Encryption',
+                    correct: 3
+                }, {
+                    text: 'Hashing',
+                    correct: 4
+                }]
+            }, {
+                question: ')Which of the following is an example of a strong password',
+                answers: [{
+                    text: 'abcdefg',
+                    correct: 2
+                }, {
+                    text: ' MyDog"sName',
+                    correct: 4
+                }, {
+                    text: '12345',
+                    correct: 3
+                }, {
+                    text: 'Password123!',
+                    correct: 1
+                }]
+            }, {
+                question: ')What type of malware disguises itself as legitimate software but is actually malicious?',
+                answers: [{
+                    text: ' IoT data',
+                    correct: 2
+                }, {
+                    text: 'Trojan',
+                    correct: 1
+                }, {
+                    text: 'Big data',
+                    correct: 3
+                }, {
+                    text: 'Transactional data',
+                    correct: 4
+                }]
+            },{
+                question: ') What is the primary purpose of an ARP poisoning attack?',
+                answers: [{
+                    text: 'To improve network performance',
+                    correct: 4
+                }, {
+                    text: 'To intercept and modify network traffic',
+                    correct: 1
+                }, {
+                    text: 'To protect against DNS attacks',
+                    correct: 2
+                }, {
+                    text: 'To enhance DNS security',
+                    correct: 3 
+                }]
+            },{
+                question: ') Which encryption method uses a pair of keys for data confidentiality?',
+                answers: [{
+                    text: 'Symmetric encryption',
+                    correct: 4
+                }, {
+                    text: 'Asymmetric encryption',
+                    correct: 1
+                }, {
+                    text: 'Public key encryption',
+                    correct: 2
+                }, {
+                    text: 'Private key encryption',
+                    correct: 3 
+                }]
+            },{
+                question: ') What does the term "MITM" stand for in network security?',
+                answers: [{
+                    text: 'Middle Internet Transmission Monitor',
+                    correct: 4
+                }, {
+                    text: 'Man-in-the-Middle',
+                    correct: 1
+                }, {
+                    text: 'Malware Infection Threat Management',
+                    correct: 2
+                }, {
+                    text: 'Multiple Inbound Traffic Mode',
+                    correct: 3 
+                }]
+            },{
+                question: ') What is the primary objective of a DNS amplification attack?',
+                answers: [{
+                    text: 'To improve DNS performance',
+                    correct: 4
+                }, {
+                    text: 'To compromise DNS servers',
+                    correct: 1
+                }, {
+                    text: 'To amplify network traffic',
+                    correct: 2
+                }, {
+                    text: 'To compromise DNS servers',
+                    correct: 3 
+                }]
+            },{
+                question: ') Which hashing algorithm is considered secure for data integrity and authentication?',
+                answers: [{
+                    text: 'SHA-1',
+                    correct: 3
+                }, {
+                    text: 'SHA-3',
+                    correct: 2
+                }, {
+                    text: 'SHA-2',
+                    correct: 1
+                }, {
+                    text: 'MD5',
+                    correct: 4 
+                }]
+            },{
+                question: ') In public key encryption, which key is kept private by the owner?',
+                answers: [{
+                    text: 'Public key',
+                    correct: 3
+                }, {
+                    text: 'Symmetric key',
+                    correct: 2
+                }, {
+                    text: 'Private key',
+                    correct: 1
+                }, {
+                    text: 'Shared key',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is a common technique used in DNS cache poisoning attacks?',
+                answers: [{
+                    text: 'Amplifying DNS queries',
+                    correct: 3
+                }, {
+                    text: 'Intercepting HTTPS traffic',
+                    correct: 2
+                }, {
+                    text: 'Forging DNS requests',
+                    correct: 1
+                }, {
+                    text: 'Overloading DNS servers',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which type of encryption is often used for securing internet communications?',
+                answers: [{
+                    text: 'RSA',
+                    correct: 3
+                }, {
+                    text: 'HMAC',
+                    correct: 2
+                }, {
+                    text: 'AES',
+                    correct: 1
+                }, {
+                    text: 'SHA-256',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the primary goal of a DNSSEC (DNS Security Extensions) implementation?',
+                answers: [{
+                    text: 'To enhance DNS performance',
+                    correct: 3
+                }, {
+                    text: 'To create subdomains',
+                    correct: 2
+                }, {
+                    text: 'To protect against DNS cache poisoning',
+                    correct: 1
+                }, {
+                    text: 'To improve network speed',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is a common defense mechanism against ARP spoofing attacks?',
+                answers: [{
+                    text: 'Virtual Private Network (VPN)',
+                    correct: 3
+                }, {
+                    text: 'Firewalls',
+                    correct: 2
+                }, {
+                    text: 'Intrusion Detection System (IDS)',
+                    correct: 1
+                }, {
+                    text: 'Proxy servers',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which encryption method is often used for securing email communication?',
+                answers: [{
+                    text: 'AES',
+                    correct: 3
+                }, {
+                    text: 'HMAC',
+                    correct: 2
+                }, {
+                    text: 'RSA',
+                    correct: 1
+                }, {
+                    text: 'SHA-256',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the primary purpose of an intrusion detection system (IDS) in network security?',
+                answers: [{
+                    text: 'To prevent DDoS attacks',
+                    correct: 3
+                }, {
+                    text: 'To encrypt network traffic',
+                    correct: 2
+                }, {
+                    text: 'To detect and alert on suspicious activities',
+                    correct: 1
+                }, {
+                    text: 'To enhance DNS security',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which type of attack involves sending a flood of SYN packets with spoofed source IP addresses?',
+                answers: [{
+                    text: 'TCP ACK flood attack',
+                    correct: 3
+                }, {
+                    text: 'ARP poisoning attack',
+                    correct: 2
+                }, {
+                    text: 'Smurf attack',
+                    correct: 1
+                }, {
+                    text: 'DNS amplification attack',
+                    correct: 4 
+                }]
+            },{
+                question: ') Why is network security important?',
+                answers: [{
+                    text: 'To increase network speed',
+                    correct: 2
+                }, {
+                    text: 'To enhance network connectivity',
+                    correct: 4
+                }, {
+                    text: 'To reduce hardware costs',
+                    correct: 3
+                }, {
+                    text: 'To prevent data breaches',
+                    correct: 1 
+                }]
+            },{
+                question: ') What is the module objective of "Network Security Concepts"?',
+                answers: [{
+                    text: 'Describe common network attacks',
+                    correct: 2
+                }, {
+                    text: 'Explain the history of computer hacking',
+                    correct: 4
+                }, {
+                    text: 'Discuss the principles of software development',
+                    correct: 3
+                }, {
+                    text: 'Explain how vulnerabilities, threats, and exploits can be mitigated',
+                    correct: 1 
+                }]
+            },{
+                question: ') What is the term for a weakness in a system or its design that could be exploited by a threat?',
+                answers: [{
+                    text: 'Threat',
+                    correct: 2
+                }, {
+                    text: 'Exploit',
+                    correct: 4
+                }, {
+                    text: 'Risk',
+                    correct: 3
+                }, {
+                    text: 'Vulnerability',
+                    correct: 1 
+                }]
+            },{
+                question: ') What type of hacker uses their programming skills for ethical and legal purposes?',
+                answers: [{
+                    text: 'Black Hat Hacker',
+                    correct: 2
+                }, {
+                    text: 'Gray Hat Hacker',
+                    correct: 4
+                }, {
+                    text: 'Red Hat Hacker',
+                    correct: 3
+                }, {
+                    text: 'White Hat Hacker',
+                    correct: 1 
+                }]
+            },{
+                question: ') When did hacking first begin with "phone freaking"?',
+                answers: [{
+                    text: '1970s',
+                    correct: 2
+                }, {
+                    text: '1990s',
+                    correct: 4
+                }, {
+                    text: '2000s',
+                    correct: 3
+                }, {
+                    text: '1980s',
+                    correct: 1 
+                }]
+            },{
+                question: ') What type of hackers create advanced, customized attack code and often target specific vulnerabilities?',
+                answers: [{
+                    text: 'White Hat Hackers',
+                    correct: 2
+                }, {
+                    text: 'Black Hat Hackers',
+                    correct: 4
+                }, {
+                    text: 'Gray Hat Hackers',
+                    correct: 3
+                }, {
+                    text: 'State-Sponsored Hackers',
+                    correct: 1 
+                }]
+            },{
+                question: ') What is the most common type of computer malware that requires human action to propagate?',
+                answers: [{
+                    text: 'Worm',
+                    correct: 2
+                }, {
+                    text: 'Trojan Horse',
+                    correct: 4
+                }, {
+                    text: 'Spyware',
+                    correct: 3
+                }, {
+                    text: 'Virus',
+                    correct: 1 
+                }]
+            },{
+                question: ') What service is NOT provided by TCP?',
+                answers: [{
+                    text: 'Stateful communication',
+                    correct: 2
+                }, {
+                    text: 'Flow control',
+                    correct: 4
+                }, {
+                    text: 'Reliable delivery',
+                    correct: 3
+                }, {
+                    text: 'Encryption',
+                    correct: 1 
+                }]
+            },{
+                question: ') Which type of attack exploits the TCP three-way handshake to overwhelm a target host with half-open connections?',
+                answers: [{
+                    text: 'TCP Reset Attack',
+                    correct: 2
+                }, {
+                    text: 'Session Hijacking',
+                    correct: 4
+                }, {
+                    text: 'Amplification Attack',
+                    correct: 3
+                }, {
+                    text: 'SYN Flood Attack',
+                    correct: 1 
+                }]
+            },{
+                question: ') What transport layer protocol is commonly used for DNS, TFTP, NFS, and SNMP?',
+                answers: [{
+                    text: 'TCP',
+                    correct: 2
+                }, {
+                    text: 'ICMP',
+                    correct: 4
+                }, {
+                    text: 'ARP',
+                    correct: 3
+                }, {
+                    text: 'UDP',
+                    correct: 1 
+                }]
+            },{
+
+
+
+
+
+                question: ') What type of attack involves placing non-DNS traffic within DNS traffic to circumvent security solutions?',
+                answers: [{
+                    text: 'DNS Tunneling Attack',
+                    correct: 1
+                }, {
+                    text: 'DNS Reflection Attack',
+                    correct: 3
+                }, {
+                    text: 'DNS Spoofing Attack',
+                    correct: 2
+                }, {
+                    text: 'DNS Amplification Attack',
+                    correct: 4 
+                }]
+            },{
+                question: ') What type of attack occurs when a rogue DHCP server provides false IP configuration parameters to legitimate clients?',
+                answers: [{
+                    text: 'DHCP Spoofing Attack',
+                    correct: 1
+                }, {
+                    text: 'DHCP Poisoning Attack',
+                    correct: 3
+                }, {
+                    text: 'DHCP Amplification Attack',
+                    correct: 2
+                }, {
+                    text: 'DHCP Reflection Attack',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which element of secure communications ensures that data was not altered during transmission?',
+                answers: [{
+                    text: 'Data Integrity',
+                    correct: 1
+                }, {
+                    text: 'Origin Authentication',
+                    correct: 3
+                }, {
+                    text: 'Data Confidentiality',
+                    correct: 2
+                }, {
+                    text: 'Data Non-Repudiation',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which hashing algorithm is recommended over MD5 and SHA-1 for improved security?',
+                answers: [{
+                    text: 'SHA-256',
+                    correct: 1
+                }, {
+                    text: 'MD5',
+                    correct: 3
+                }, {
+                    text: 'SHA-1',
+                    correct: 2
+                }, {
+                    text: 'SHA-512',
+                    correct: 4 
+                }]
+            },{
+                question: ') What type of encryption relies on a shared secret key between communicating parties?',
+                answers: [{
+                    text: 'Symmetric encryption',
+                    correct: 1
+                }, {
+                    text: 'Asymmetric encryption',
+                    correct: 3
+                }, {
+                    text: 'Public key encryption',
+                    correct: 2
+                }, {
+                    text: 'Diffie-Hellman encryption',
+                    correct: 4 
+                }]
+            },{
+                question: ') What does HMAC use to provide authentication and integrity assurance?',
+                answers: [{
+                    text: 'Shared secret key',
+                    correct: 1
+                }, {
+                    text: 'Public key',
+                    correct: 3
+                }, {
+                    text: 'Private key',
+                    correct: 2
+                }, {
+                    text: 'Session key',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which encryption algorithm is NOT recommended for use due to known vulnerabilities?',
+                answers: [{
+                    text: 'DES',
+                    correct: 1
+                }, {
+                    text: 'AES',
+                    correct: 3
+                }, {
+                    text: '3DES',
+                    correct: 2
+                }, {
+                    text: 'RSA',
+                    correct: 4 
+                }]
+            },{
+                question: ') What does DNS tunneling involve placing within DNS traffic?',
+                answers: [{
+                    text: 'Non-DNS traffic',
+                    correct: 1
+                }, {
+                    text: 'Encrypted data',
+                    correct: 3
+                }, {
+                    text: 'IP addresses',
+                    correct: 2
+                }, {
+                    text: 'Cookies',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which protocol is used for the exchange of resource names and numeric network addresses?',
+                answers: [{
+                    text: 'DNS',
+                    correct: 1
+                }, {
+                    text: 'HTTP',
+                    correct: 3
+                }, {
+                    text: 'FTP',
+                    correct: 2
+                }, {
+                    text: 'SMTP',
+                    correct: 4 
+                }]
+            },{
+                question: ') What class of encryption algorithms relies on a pre-shared key between communicating parties?',
+                answers: [{
+                    text: 'Symmetric encryption',
+                    correct: 1
+                }, {
+                    text: 'Asymmetric encryption',
+                    correct: 3
+                }, {
+                    text: 'Public key encryption',
+                    correct: 2
+                }, {
+                    text: 'RSA encryption',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which cryptographic algorithm is considered the newest and is introduced as a replacement for SHA-2?',
+                answers: [{
+                    text: 'MD5',
+                    correct: 2
+                }, {
+                    text: 'SHA-1',
+                    correct: 3
+                }, {
+                    text: 'SHA-3',
+                    correct: 1
+                }, {
+                    text: 'DES',
+                    correct: 4 
+                }]
+            },{
+                question: ') What type of encryption requires both a public key and a private key for secure communication?',
+                answers: [{
+                    text: 'Symmetric encryption',
+                    correct: 2
+                }, {
+                    text: 'Diffie-Hellman encryption',
+                    correct: 3
+                }, {
+                    text: 'Asymmetric encryption',
+                    correct: 1
+                }, {
+                    text: 'RSA encryption',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which key-exchange algorithm allows two computers to generate a shared secret key without prior communication?',
+                answers: [{
+                    text: 'RSA',
+                    correct: 2
+                }, {
+                    text: 'AES',
+                    correct: 3
+                }, {
+                    text: 'Diffie-Hellman',
+                    correct: 1
+                }, {
+                    text: 'HMAC',
+                    correct: 4 
+                }]
+            },{
+                question: ') What protocol is used for secure data transmission in an IPsec VPN?',
+                answers: [{
+                    text: 'SSL',
+                    correct: 2
+                }, {
+                    text: 'TLS',
+                    correct: 3
+                }, {
+                    text: 'SSH',
+                    correct: 1
+                }, {
+                    text: 'HMAC',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the main purpose of ARP in a network?',
+                answers: [{
+                    text: 'To secure data transmission ',
+                    correct: 2
+                }, {
+                    text: 'To prevent data breaches',
+                    correct: 3
+                }, {
+                    text: 'To map IP addresses to MAC addresses',
+                    correct: 1
+                }, {
+                    text: 'To encrypt network traffic',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is a "gratuitous ARP"?',
+                answers: [{
+                    text: 'A type of DNS query',
+                    correct: 2
+                }, {
+                    text: 'An ICMP packet',
+                    correct: 3
+                }, {
+                    text: 'An unsolicited ARP Reply',
+                    correct: 1
+                }, {
+                    text: 'A network protocol',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which type of hacker is typically motivated by personal gain or malicious intent?',
+                answers: [{
+                    text: 'White Hat Hacker',
+                    correct: 2
+                }, {
+                    text: 'Gray Hat Hacker',
+                    correct: 3
+                }, {
+                    text: 'Black Hat Hacker',
+                    correct: 1
+                }, {
+                    text: 'Blue Hat Hacker',
+                    correct: 4 
+                }]
+            },{
+                question: ') What is the primary purpose of DNS tunneling in cyberattacks?',
+                answers: [{
+                    text: 'To encrypt DNS traffic',
+                    correct: 2
+                }, {
+                    text: 'To create secure communication channels',
+                    correct: 3
+                }, {
+                    text: 'To bypass firewalls',
+                    correct: 1
+                }, {
+                    text: 'To prevent DDoS attacks',
+                    correct: 4 
+                }]
+            },{
+                question: ') Which cryptographic algorithm is considered a legacy algorithm and should be avoided for data confidentiality?',
+                answers: [{
+                    text: 'AES',
+                    correct: 2
+                }, {
+                    text: 'RSA',
+                    correct: 3
+                }, {
+                    text: ' DES',
+                    correct: 1
+                }, {
+                    text: 'SHA-2',
+                    correct: 4 
+                }]
+            },{
+                question: ') In the context of encryption, what does DH stand for?',
+                answers: [{
+                    text: 'Distributed Hashing',
+                    correct: 2
+                }, {
+                    text: 'Digital Handshake',
+                    correct: 3
+                }, {
+                    text: 'Diffie-Hellman',
+                    correct: 1
+                }, {
+                    text: 'Data Hiding',
+                    correct: 4 
+                }]
+            },
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let num = 1;
+        let ans;
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Shuffle the questions randomly
+        shuffleArray(questions);
+
+        // Display only the first 10 questions
+        questions.splice(30);
+
+        function showQuestion(question) {
+            quesnum.innerText = num;
+            questionElement.innerText = question.question;
+            answerButtons.innerHTML = '';
+            question.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.innerText = answer.text;
+                button.classList.add('btn');
+                button.addEventListener('click', () => selectAnswer(answer, questions[currentQuestionIndex]));
+                answerButtons.appendChild(button);
+            });
+        }
+
+        function showAnswer(question, ans) {
+            quesnum.innerText = num;
+            questionElement.innerText = question.question;
+            answerButtons.innerHTML = '';
+            question.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.innerText = answer.text;
+                button.classList.add('btn');
+                if (ans.correct == answer.correct && answer.correct == 1) {
+                    button.classList.add('correct-answer');
+                } else if (ans.correct == answer.correct && ans.correct != 1) {
+                    button.classList.add('incorrect-answer');
+                } else if (answer.correct == 1) {
+                    button.classList.add('correct-answer');
+                }
+                answerButtons.appendChild(button);
+            });
+            nextbutton.innerHTML = '';
+            const button = document.createElement('button');
+            button.innerText = 'next';
+            button.classList.add('nx-btn');
+            button.addEventListener('click', () => myFunction(1));
+            nextbutton.appendChild(button);
+            num++;
+        }
+
+        function selectAnswer(answer, question) {
+            if (answer.correct == 1) {
+                score++;
+                scoreElement.innerText = score;
+            }
+            showAnswer(questions[currentQuestionIndex], answer);
+        }
+
+        function myFunction(x) {
+            nextbutton.innerHTML = '';
+            currentQuestionIndex = currentQuestionIndex + x;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion(questions[currentQuestionIndex]);
+            } else {
+                scorecontainer.innerHTML = '';
+
+                if (score > 15) {
+                    questionContainer.innerHTML = `<h1>Quiz Completed!</h1><p style="background-color:#68cf8f; padding:6px; width:25%; border:1px solid #fff; border-radius:5px;">Your Final Score: ${score}</p><p style="color:#68cf8f;">Pass</p>`;
+
+
+                } else {
+                    questionContainer.innerHTML = `<h1>Quiz Completed!</h1><p style="background-color:#ff0000; padding:6px; width:25%; border:1px solid #fff; border-radius:5px;">Your Final Score: ${score}</p><p style="color:#ff0000;">Fail</p>`;
+
+                }
+            }
+        }
+
+        showQuestion(questions[currentQuestionIndex]);
+    </script>
+</body>
+
+</html>
